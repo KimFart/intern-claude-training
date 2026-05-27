@@ -19,6 +19,7 @@ conda create -n sbml -y \
   meme \
   biopython \
   pysam \
+  scipy \
   pandas \
   matplotlib \
   seaborn \
