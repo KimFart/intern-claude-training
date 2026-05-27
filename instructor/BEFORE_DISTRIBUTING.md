@@ -15,7 +15,7 @@ Requirements for the chosen accession:
 - ~500,000 reads (subsample if necessary with `seqtk sample`)
 - Alignment should complete in under 5 minutes on Codespace free tier (2 vCPU, 4 GB RAM)
 
-Recommended: use a single-end ChIP-exo sample from the same Seo et al. 2014 study (GEO: GSE54901) for consistency with Module 4. Subsample with:
+Recommended: use a single-end ChIP-exo sample from the same Seo et al. 2014 study (GEO: GSE54901) for consistency with Module 4. Subsample with *(run this on the lab server, not inside the Codespace — `seqtk` is not installed in the intern environment)*:
 ```bash
 seqtk sample SRR######.fastq 500000 > SRR######_500k.fastq
 ```
@@ -39,11 +39,25 @@ Used in Module 2 (pandas exercises), Module 4 Exercise 7 (TSS distance analysis)
 
 ## 3. Mini-Project Dataset
 
-No action needed. The mini-project uses the same Fur ChIP-exo files interns download themselves in Module 4. Nothing extra to add before distributing.
+No action needed. The mini-project uses the same Fur ChIP-exo files interns download themselves in Module 4.
 
 ---
 
-## 4. GitHub Codespace — Test Before Distributing
+## 4. Verify GSE54901 Download Works
+
+Before distributing, manually open the GEO series page and confirm the peak file is available:
+
+```
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54901
+```
+
+- Confirm the Fur ChIP-exo peak file for the iron-replete condition is listed under **Supplementary file** and is downloadable
+- Note the exact filename here: `[filename]` — record this in `data/reference/README.md` so interns can verify they got the right file
+- If the file format has changed (NCBI occasionally restructures GEO supplementary files), update the Module 4 Exercise 4 instructions accordingly
+
+---
+
+## 5. GitHub Codespace — Test Before Distributing
 
 1. Open the repo on GitHub
 2. Click **Code → Codespaces → New codespace on main**
@@ -55,15 +69,16 @@ No action needed. The mini-project uses the same Fur ChIP-exo files interns down
    samtools --version
    meme -version
    python -c "import Bio; print('Biopython', Bio.__version__)"
+   python -c "import pysam; print('pysam', pysam.__version__)"
    efetch -version
    claude --version
    ```
-5. Run Module 1 notebook top-to-bottom — it should produce no errors
+5. Run Module 1 notebook — concept cells should render without errors. **Note:** Exercise 2 (`m1-ex2-code`) is intentionally broken and will raise a `KeyError` when run — this is expected and is the exercise.
 6. Confirm plan mode works: in the Claude Code terminal, press **Shift+Tab** before sending a prompt
 
 ---
 
-## 5. Claude Code Pro Plan
+## 6. Claude Code Pro Plan
 
 Interns need a Claude.ai Pro plan account to use plan mode (Shift+Tab).
 
@@ -72,11 +87,13 @@ Interns need a Claude.ai Pro plan account to use plan mode (Shift+Tab).
 
 ---
 
-## 6. Final Checklist
+## 7. Final Checklist
 
 - [ ] `[SRR_ACCESSION]` replaced in `data/reference/README.md`
 - [ ] `ec_annotation_20100903_DHK_cSRNA_with_ortho.gff` copied to `data/reference/`
-- [ ] Codespace test-launched and all tools verified
+- [ ] GSE54901 supplementary file verified downloadable; filename recorded in `data/reference/README.md`
+- [ ] Codespace test-launched and all tools verified (including `pysam`)
+- [ ] Module 1 concept cells render correctly; Exercise 2 intentionally raises `KeyError`
 - [ ] Plan mode tested in Codespace terminal
 - [ ] All interns have Claude Pro plan accounts
 - [ ] `instructor/rubric.md` reviewed and shared with interns (or kept internal — your call)

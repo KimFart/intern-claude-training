@@ -46,6 +46,6 @@ Remind the user: "Add this to your `/log` entry under 'Broke / Struggled' — no
 
 - Common failure patterns in this lab's stack:
   - bowtie2: index not built before alignment (`bowtie2-build` must run first)
-  - MEME: input FASTA must have ≥2 sequences and sequences must be the same type (DNA)
+  - MEME: input FASTA must have ≥2 sequences; sequences shorter than `-maxw` will error — reduce `-maxw` or extend the extraction window in your Biopython script
   - Biopython SeqIO: wrong format string (e.g. `"fasta"` vs `"fastq"`)
   - fastq-dump: `--split-files` needed for paired-end; omitting it merges both reads into one file

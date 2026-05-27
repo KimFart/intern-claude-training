@@ -18,7 +18,7 @@ A 6-week training curriculum for SBML Lab (KAIST GSEB) interns. Covers Python, G
 | 2 | GFF parsing + pandas with Claude Code |
 | 3 | NGS alignment pipeline with Claude Code |
 | 4 | Papers, MEME, and Biopython with Claude Code |
-| 5–6 | Independent mini-project |
+| 5 (Weeks 5–6) | Independent mini-project |
 
 ## Standing Rules
 
@@ -53,5 +53,5 @@ Three custom skills are provided for this training:
 lab-context.md          ← lab context for Claude Code
 notebooks/              ← all 5 training notebooks (01–05)
 data/reference/         ← shared reference data and downloads
-instructor/             ← rubric and solutions
+instructor/             ← rubric and instructor notes
 ```
