@@ -23,10 +23,14 @@ conda create -n sbml -y \
   seaborn \
   jupyter \
   ipykernel \
-  notebook
+  notebook \
+  entrez-direct
 
 # Register the kernel so Jupyter sees it
 conda run -n sbml python -m ipykernel install --user --name sbml --display-name "Python (sbml)"
+
+# Auto-activate sbml environment in new shells
+echo "conda activate sbml" >> ~/.bashrc
 
 # Install Claude Code CLI (requires Node.js)
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
@@ -34,5 +38,5 @@ sudo apt-get install -y nodejs
 npm install -g @anthropic-ai/claude-code
 
 echo ""
-echo "==> Environment ready. Activate with: conda activate sbml"
+echo "==> Environment ready. 'sbml' conda environment will activate automatically in new shells."
 echo "==> Claude Code: run 'claude' in the terminal and authenticate with your Pro plan account."
