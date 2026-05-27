@@ -22,22 +22,7 @@ seqtk sample SRR######.fastq 500000 > SRR######_500k.fastq
 
 ---
 
-## 2. `makegff.py` — Module 3, Question 3-6
-
-**Status:** This script is a lab custom tool and is not included in this repo.
-
-Before distributing, either:
-- Copy `makegff.py` from the lab server into `module3-ngs-pipeline/` (recommended)
-- Or update Step 6 in `03_ngs_pipeline_with_claude.ipynb` to use `bedtools bamtobed` or another accessible alternative
-
-The script is called in the pipeline as:
-```bash
-python makegff.py input.bam output.gff
-```
-
----
-
-## 3. Module 4 Paper Excerpt — FUR Binding Sites
+## 2. Module 4 Paper Excerpt — FUR Binding Sites
 
 **File:** `module4-multiomics-motif/data/sample/fur_paper_excerpt.txt`
 
@@ -47,7 +32,7 @@ If you swap in a real paper excerpt, update the validation expectations accordin
 
 ---
 
-## 4. Mini-Project Dataset — Modules 5–6
+## 3. Mini-Project Dataset — Modules 5–6
 
 **Directory:** `module5-6-miniproject/data/`
 
@@ -58,7 +43,7 @@ This directory is empty in the repo. Add the dataset before distributing:
 
 ---
 
-## 5. GitHub Codespace — Test Before Distributing
+## 4. GitHub Codespace — Test Before Distributing
 
 1. Open the repo on GitHub
 2. Click **Code → Codespaces → New codespace on main**
@@ -78,7 +63,7 @@ This directory is empty in the repo. Add the dataset before distributing:
 
 ---
 
-## 6. Claude Code Pro Plan
+## 5. Claude Code Pro Plan
 
 Interns need a Claude.ai Pro plan account to use plan mode (Shift+Tab).
 
@@ -87,10 +72,9 @@ Interns need a Claude.ai Pro plan account to use plan mode (Shift+Tab).
 
 ---
 
-## 7. Final Checklist
+## 6. Final Checklist
 
 - [ ] `[SRR_ACCESSION]` replaced in `module3-ngs-pipeline/data/sample/README.md`
-- [ ] `makegff.py` copied to `module3-ngs-pipeline/` (or Step 6 updated)
 - [ ] `module5-6-miniproject/data/` contains the cohort dataset
 - [ ] Codespace test-launched and all tools verified
 - [ ] Plan mode tested in Codespace terminal
