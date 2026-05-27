@@ -19,7 +19,6 @@ When using `/explain`, `/debug`, or any Claude Code interaction, this is the bac
 | Organism | Strain | Use |
 |---|---|---|
 | *E. coli* K-12 | MG1655 | Primary model organism |
-| *S. enterica* | 14028s | Comparative / pathogen studies |
 
 Reference genome for *E. coli* K-12 MG1655: **NC_000913** (NCBI)
 
@@ -31,10 +30,6 @@ Reference genome for *E. coli* K-12 MG1655: **NC_000913** (NCBI)
 |---|---|
 | ChIP-exo / ChIP-mini | Protein-DNA binding site mapping (transcription factors) |
 | RNA-seq | Differential gene expression |
-| dRIP-exo | RNA-protein interaction mapping |
-| sRIL-exo | sRNA-target interaction mapping |
-| Overlap PCR | Strain construction |
-| Western blot | Protein detection |
 
 ---
 
