@@ -22,18 +22,18 @@ seqtk sample SRR######.fastq 500000 > SRR######_500k.fastq
 
 ---
 
-## 2. Lab Annotation GFF — Module 4, Exercise 7
+## 2. Lab Annotation GFF — Module 4 + Mini-Project
 
-**File to place:** `module4-multiomics-motif/data/ec_annotation_20100903_DHK_cSRNA_with_ortho.gff`
+**File to place:** `data/reference/ec_annotation_20100903_DHK_cSRNA_with_ortho.gff`
 
 This file is the lab's *E. coli* K-12 MG1655 annotation GFF with TSS positions. It is not in the repo. Copy it from the lab server before distributing:
 
 ```bash
 cp /path/to/lab/data/ec_annotation_20100903_DHK_cSRNA_with_ortho.gff \
-   module4-multiomics-motif/data/
+   data/reference/
 ```
 
-Interns use it in Exercise 7 (TSS distance analysis). Without it, Exercise 7 cannot run.
+Used in Module 4 Exercise 7 (TSS distance analysis) and available to interns for their mini-project. Without it, Exercise 7 cannot run.
 
 ---
 
@@ -80,7 +80,7 @@ Interns need a Claude.ai Pro plan account to use plan mode (Shift+Tab).
 ## 6. Final Checklist
 
 - [ ] `[SRR_ACCESSION]` replaced in `module3-ngs-pipeline/data/sample/README.md`
-- [ ] `ec_annotation_20100903_DHK_cSRNA_with_ortho.gff` copied to `module4-multiomics-motif/data/`
+- [ ] `ec_annotation_20100903_DHK_cSRNA_with_ortho.gff` copied to `data/reference/`
 - [ ] `module5-6-miniproject/data/` contains the cohort dataset
 - [ ] Codespace test-launched and all tools verified
 - [ ] Plan mode tested in Codespace terminal
