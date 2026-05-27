@@ -1,9 +1,16 @@
 # Module 4 — Data
 
-No data is pre-loaded here. You download the FUR ChIP-exo peak data yourself from NCBI GEO as part of Exercise 4.
+## Pre-provided (already here)
 
-**Dataset:** Seo et al. 2014, *Genome-wide mapping of the Fur and RpoS regulons in E. coli*
-**GEO accession:** GSE54901
-**Paper:** https://pmc.ncbi.nlm.nih.gov/articles/PMC4167408/
+| File | Used in | Description |
+|------|---------|-------------|
+| `ec_annotation_20100903_DHK_cSRNA_with_ortho.gff` | Exercise 7 | Lab *E. coli* K-12 MG1655 annotation with TSS positions |
 
-Follow the instructions in Exercise 4 of `04_multiomics_motif_with_claude.ipynb`.
+## You download (as part of the exercises)
+
+| File | Source | Exercise |
+|------|--------|---------|
+| FUR ChIP-exo peak GFF | GEO accession **GSE54901** | Exercise 4 |
+| `NC_000913.fasta` | NCBI nucleotide, accession **NC_000913.3** | Exercise 4 |
+
+**Paper:** Seo et al. 2014 — https://pmc.ncbi.nlm.nih.gov/articles/PMC4167408/
