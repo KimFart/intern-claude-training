@@ -1,0 +1,30 @@
+##gff-version 3
+##sequence-region NC_000913.3 1 4641652
+NC_000913.3	RefSeq	gene	190	255	.	+	.	ID=gene-b0001;Name=thrL;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	190	255	.	+	0	ID=cds-b0001;Parent=gene-b0001;Name=thrL
+NC_000913.3	RefSeq	gene	337	2799	.	+	.	ID=gene-b0002;Name=thrA;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	337	2799	.	+	0	ID=cds-b0002;Parent=gene-b0002;Name=thrA
+NC_000913.3	RefSeq	gene	2801	3733	.	+	.	ID=gene-b0003;Name=thrB;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	2801	3733	.	+	0	ID=cds-b0003;Parent=gene-b0003;Name=thrB
+NC_000913.3	RefSeq	gene	3734	5020	.	+	.	ID=gene-b0004;Name=thrC;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	3734	5020	.	+	0	ID=cds-b0004;Parent=gene-b0004;Name=thrC
+NC_000913.3	RefSeq	gene	5234	5530	.	-	.	ID=gene-b0005;Name=yaaX;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	5234	5530	.	-	0	ID=cds-b0005;Parent=gene-b0005;Name=yaaX
+NC_000913.3	RefSeq	gene	5683	6459	.	-	.	ID=gene-b0006;Name=yaaA;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	5683	6459	.	-	0	ID=cds-b0006;Parent=gene-b0006;Name=yaaA
+NC_000913.3	RefSeq	gene	6529	7959	.	-	.	ID=gene-b0007;Name=yaaJ;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	6529	7959	.	-	0	ID=cds-b0007;Parent=gene-b0007;Name=yaaJ
+NC_000913.3	RefSeq	gene	8238	9191	.	+	.	ID=gene-b0008;Name=talB;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	8238	9191	.	+	0	ID=cds-b0008;Parent=gene-b0008;Name=talB
+NC_000913.3	RefSeq	gene	9306	9893	.	+	.	ID=gene-b0009;Name=mog;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	9306	9893	.	+	0	ID=cds-b0009;Parent=gene-b0009;Name=mog
+NC_000913.3	RefSeq	gene	10643	11356	.	-	.	ID=gene-b0010;Name=yaaH;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	10643	11356	.	-	0	ID=cds-b0010;Parent=gene-b0010;Name=yaaH
+NC_000913.3	RefSeq	gene	273307	274254	.	-	.	ID=gene-b0262;Name=fur;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	273307	274254	.	-	0	ID=cds-b0262;Parent=gene-b0262;Name=fur
+NC_000913.3	RefSeq	gene	694816	695022	.	-	.	ID=gene-b0659;Name=rybB;gene_biotype=ncRNA
+NC_000913.3	RefSeq	ncRNA	694816	695022	.	-	.	ID=ncrna-b0659;Parent=gene-b0659;Name=rybB
+NC_000913.3	RefSeq	gene	1373209	1373494	.	+	.	ID=gene-b1286;Name=fepA;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	1373209	1373494	.	+	0	ID=cds-b1286;Parent=gene-b1286;Name=fepA
+NC_000913.3	RefSeq	gene	2235187	2235723	.	+	.	ID=gene-b2147;Name=entS;gene_biotype=protein_coding
+NC_000913.3	RefSeq	CDS	2235187	2235723	.	+	0	ID=cds-b2147;Parent=gene-b2147;Name=entS
