@@ -22,17 +22,7 @@ seqtk sample SRR######.fastq 500000 > SRR######_500k.fastq
 
 ---
 
-## 2. Module 4 Paper Excerpt — FUR Binding Sites
-
-**File:** `module4-multiomics-motif/data/sample/fur_paper_excerpt.txt`
-
-This file contains a synthetic excerpt describing FUR binding site coordinates. Verify that the coordinates in the excerpt are biologically reasonable and consistent with the published FUR regulon (e.g., Seo et al. 2014, Nucleic Acids Res).
-
-If you swap in a real paper excerpt, update the validation expectations accordingly.
-
----
-
-## 3. Mini-Project Dataset — Modules 5–6
+## 2. Mini-Project Dataset — Modules 5–6
 
 **Directory:** `module5-6-miniproject/data/`
 
@@ -43,7 +33,7 @@ This directory is empty in the repo. Add the dataset before distributing:
 
 ---
 
-## 4. GitHub Codespace — Test Before Distributing
+## 3. GitHub Codespace — Test Before Distributing
 
 1. Open the repo on GitHub
 2. Click **Code → Codespaces → New codespace on main**
@@ -63,7 +53,7 @@ This directory is empty in the repo. Add the dataset before distributing:
 
 ---
 
-## 5. Claude Code Pro Plan
+## 4. Claude Code Pro Plan
 
 Interns need a Claude.ai Pro plan account to use plan mode (Shift+Tab).
 
@@ -72,7 +62,7 @@ Interns need a Claude.ai Pro plan account to use plan mode (Shift+Tab).
 
 ---
 
-## 6. Final Checklist
+## 5. Final Checklist
 
 - [ ] `[SRR_ACCESSION]` replaced in `module3-ngs-pipeline/data/sample/README.md`
 - [ ] `module5-6-miniproject/data/` contains the cohort dataset
