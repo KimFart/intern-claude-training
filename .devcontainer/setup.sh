@@ -3,6 +3,9 @@ set -e
 
 echo "==> Setting up SBML intern training environment..."
 
+# Make conda commands available in this non-interactive script
+source /opt/conda/etc/profile.d/conda.sh
+
 # Configure conda channels
 conda config --add channels defaults
 conda config --add channels bioconda
