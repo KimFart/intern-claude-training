@@ -3,55 +3,35 @@ set -e
 
 echo "==> Setting up SBML intern training environment..."
 
-# Make conda commands available in this non-interactive script
+# Source conda for this script only (does not affect terminals)
 source /opt/conda/etc/profile.d/conda.sh
 
-# Configure conda channels
+# Configure channels
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 
-# Install mamba for faster package resolution
+# Install mamba for faster resolution
 echo "==> Installing mamba..."
 conda install -n base -c conda-forge mamba -y
 
-# Phase 1: Create env with Python + Jupyter immediately so VS Code has a valid interpreter
-echo "==> Phase 1: Creating sbml env with Python + Jupyter..."
-mamba create -n sbml -y python=3.11 ipykernel jupyter notebook
+# Create sbml env with all packages at once
+echo "==> Creating sbml conda environment..."
+mamba create -n sbml -y python=3.11 \
+  ipykernel jupyter notebook \
+  bowtie2 samtools bedtools sra-tools meme \
+  biopython pysam scipy pandas matplotlib seaborn entrez-direct
 
-# Register the kernel right away so VS Code can use it
-conda run -n sbml python -m ipykernel install --user --name sbml --display-name "Python (sbml)"
+# Register kernel using direct path — no conda run, no conda activate
+echo "==> Registering Jupyter kernel..."
+/opt/conda/envs/sbml/bin/python -m ipykernel install --user \
+  --name sbml --display-name "Python (sbml)"
 
-echo "==> Python (sbml) kernel ready."
-
-# Source conda profile then activate sbml in every new shell
-echo 'source /opt/conda/etc/profile.d/conda.sh' >> ~/.bashrc
-echo 'conda activate sbml' >> ~/.bashrc
-
-# Install Claude Code CLI (requires Node.js)
+# Install Claude Code CLI
 echo "==> Installing Claude Code CLI..."
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 npm install -g @anthropic-ai/claude-code
 
-echo "==> Phase 1 complete: Python kernel, conda shell, and Claude Code CLI ready."
-
-# Phase 2: Install bioinformatics tools
-echo "==> Phase 2: Installing bioinformatics tools (this takes a while)..."
-mamba install -n sbml -y \
-  bowtie2 \
-  samtools \
-  bedtools \
-  sra-tools \
-  meme \
-  biopython \
-  pysam \
-  scipy \
-  pandas \
-  matplotlib \
-  seaborn \
-  entrez-direct
-
-echo ""
-echo "==> Environment fully ready. Run 'claude' in the terminal and authenticate with your Pro plan account."
+echo "==> Setup complete."

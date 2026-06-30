@@ -16,8 +16,5 @@
       }
     }
   },
-  "forwardPorts": [8888],
-  "remoteEnv": {
-    "CONDA_DEFAULT_ENV": "sbml"
-  }
+  "forwardPorts": [8888]
 }
