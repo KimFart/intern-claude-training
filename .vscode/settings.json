@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "/opt/conda/envs/sbml/bin/python",
+  "python.condaPath": "/opt/conda/bin/conda",
+  "terminal.integrated.defaultProfile.linux": "bash"
+}
