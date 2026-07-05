@@ -66,7 +66,7 @@ seqname  source  feature  start  end  score  strand  frame  attribute
 ```
 - 1-based coordinates
 - Strand: `+` or `-`
-- The lab's GFF files typically use `read` as the feature type
+- The annotation GFF uses `gene` as the feature type; `makegff.py` output (aligned reads) uses `read` as the feature type
 
 ### Python Libraries
 - `pandas` — DataFrame operations on GFF / count tables

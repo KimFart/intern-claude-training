@@ -12,7 +12,7 @@ Give a clear, practical explanation of a bioinformatics concept, tool, or file f
 ## Lab Context
 
 Always assume this environment when explaining:
-- Organism: *E. coli* K-12 MG1655 or *S. enterica* 14028s
+- Organism: *E. coli* K-12 MG1655
 - Aligner: bowtie2
 - Post-alignment: samtools (sort, index, view)
 - Coverage: makegff.py → GFF → MetaScope

@@ -27,7 +27,7 @@ All interns follow these rules throughout the training:
 1. `/log` at the end of every session
 2. `/debug` before asking for help when something breaks
 3. `/explain [concept]` before Googling
-4. Plan mode (Shift+Tab) before writing any pipeline
+4. Plan mode (Shift+Tab twice) before writing any pipeline
 
 ## Included Skills
 
@@ -48,7 +48,7 @@ Three custom skills are provided for this training:
 ## Repository Structure
 
 ```
-.claude/skills/         ← /log, /debug, /explain
+.claude/commands/       ← /log, /debug, /explain
 .devcontainer/          ← Codespace configuration
 lab-context.md          ← lab context for Claude Code
 notebooks/              ← all 5 training notebooks (01–05)

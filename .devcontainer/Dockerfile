@@ -30,7 +30,7 @@ RUN conda install -n base -c conda-forge mamba -y && \
     mamba create -n sbml -y python=3.11 \
       ipykernel jupyter notebook \
       bowtie2 samtools bedtools sra-tools \
-      biopython pysam scipy pandas matplotlib seaborn entrez-direct && \
+      biopython pysam scipy pandas openpyxl matplotlib seaborn entrez-direct && \
     conda clean -afy
 
 # Make meme + sbml env active by default — no activation needed
