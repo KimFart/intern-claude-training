@@ -22,3 +22,19 @@
 - Using Pandas can significantly improve parsing GFF files.
 
 ---
+## Session — 2026-07-09
+
+### Done
+- Built a GFF parsing/filtering python script.
+- Built a GFF reading script using pandas' read_csv function.
+- Fixed a malfunctioning read_csv script.
+- Used the iterrows() function to process each row's column information.
+
+### Broke / Struggled
+- The markdown cell for Exercise 3a was placed beneath the cell for Exercise 3b.
+
+### Learned
+- Learned what a GFF format is, how to use it, and how to interpret some of the information in it.
+- Now understand how iterrows() works, when to use it, and how to utilize it using Claude Code.
+
+---
