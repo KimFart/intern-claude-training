@@ -38,3 +38,17 @@
 - Now understand how iterrows() works, when to use it, and how to utilize it using Claude Code.
 
 ---
+## Session — 2026-07-13
+
+### Done
+- Built scripts/run_pipeline.sh and scripts/makegff.py end-to-end (bowtie2-build → align → samtools sort/index → GFF), verified against synthetic and real data.
+- Filled in notebook answers for the FASTQ/FASTA/SAM/BAM/GFF format question and Exercises 1-2.
+
+### Broke / Struggled
+- A real pipeline run against NC_000913.3 + ERR1254532 was killed mid-alignment with exit code 143 (SIGTERM) for an unclear reason.
+- An efetch download printed a scary SSL/curl error but had actually succeeded via automatic retry.
+
+### Learned
+- Understood 0-based vs 1-based coordinate conversion (pysam reference_start/reference_end), why BAM sort must precede index, SAM FLAG bits, and FASTQ Phred quality scores.
+
+---
