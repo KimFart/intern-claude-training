@@ -5,15 +5,16 @@
 set -euo pipefail
 
 usage() {
-    echo "Usage: $0 <reference> <reads> <sample_name> [output_dir]" >&2
+    echo "Usage: $0 <reference> <reads> <sample_name> [output_dir] [threads]" >&2
     echo "  reference   path to a reference FASTA, or an NCBI accession (e.g. NC_000913.3) to fetch" >&2
     echo "  reads       path to single-end FASTQ reads, or an SRA accession (e.g. SRR1177157) to fetch" >&2
     echo "  sample_name sample identifier, used to name all output files" >&2
     echo "  output_dir  directory for downloaded/generated files (default: data/reference)" >&2
+    echo "  threads     thread count for bowtie2/samtools sort (default: nproc)" >&2
     exit 1
 }
 
-if [[ $# -lt 3 || $# -gt 4 ]]; then
+if [[ $# -lt 3 || $# -gt 5 ]]; then
     usage
 fi
 
@@ -21,6 +22,7 @@ REFERENCE_ARG="$1"
 READS_ARG="$2"
 SAMPLE="$3"
 OUTPUT_DIR="${4:-data/reference}"
+THREADS="${5:-$(nproc)}"
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -77,16 +79,18 @@ else
 fi
 
 # --- Step 2: bowtie2 align (single-end) ---
-echo "Aligning $FASTQ to $INDEX_BASE"
-bowtie2 -x "$INDEX_BASE" -U "$FASTQ" -S "$SAM"
+echo "Aligning $FASTQ to $INDEX_BASE using $THREADS threads"
+bowtie2 -p "$THREADS" -x "$INDEX_BASE" -U "$FASTQ" -S "$SAM"
 
 # --- Step 3: SAM -> BAM ---
 echo "Converting SAM to BAM"
 samtools view -bS "$SAM" -o "$BAM"
 
 # --- Step 4: sort ---
-echo "Sorting BAM"
-samtools sort "$BAM" -o "$SORTED_BAM"
+# samtools sort's -@ is *additional* threads on top of the main one (unlike
+# bowtie2's -p, which is the total), so this uses one more thread than bowtie2 did.
+echo "Sorting BAM using $THREADS additional threads"
+samtools sort -@ "$THREADS" "$BAM" -o "$SORTED_BAM"
 
 # --- Step 5: index ---
 echo "Indexing sorted BAM"

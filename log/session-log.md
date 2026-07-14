@@ -52,3 +52,21 @@
 - Understood 0-based vs 1-based coordinate conversion (pysam reference_start/reference_end), why BAM sort must precede index, SAM FLAG bits, and FASTQ Phred quality scores.
 
 ---
+## Session — 2026-07-14
+
+### Done
+- Completed Module 3 Exercises 1-7 end-to-end.
+- Wrote and verified scripts/makegff.py (BAM to GFF, matches spec exactly).
+- Built scripts/download_chipexo_reads.sh and scripts/download_reference_genome.sh.
+- Added thread-count flags to scripts/run_pipeline.sh and the notebook's Exercise 7 cell.
+- Ran the real pipeline (bowtie2 -> samtools -> makegff.py), producing a verified SRR1168122_chipexo.gff (685,127 reads, 99.22% alignment rate) with matching output in both the terminal and the notebook kernel.
+
+### Broke / Struggled
+- A notebook %%bash cell resolved bare `python` to the base conda env (no pysam) instead of the sbml env.
+
+### Learned
+- Many bash command files can be built almost automatically with Claude Code.
+- %%writefile must be the first line of the cell.
+- How pysam perceives a BAM record's FLAG.
+
+---
