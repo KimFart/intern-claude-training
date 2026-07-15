@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-
+# follow-up 1: column 1 now contains the element before '.' by splitting the reference name on '.' and taking the first part. This is to match the GFF annotation file which has the same format.
+# follow-up 2: column 6 now put a '.' instead of hardcoding the score as 1.
 """Convert a sorted BAM file to a GFF file of aligned reads (one row per read)."""
 
 import argparse
@@ -35,13 +36,13 @@ def main():
                 skipped_unmapped += 1
                 continue
 
-            seqname = read.reference_name
+            seqname = read.reference_name.split(".")[0]
             start = read.reference_start + 1
             end = read.reference_end
             strand = "-" if read.is_reverse else "+"
             name = read.query_name
 
-            gff.write(f"{seqname}\tmakegff\tread\t{start}\t{end}\t1\t{strand}\t.\tname={name}\n")
+            gff.write(f"{seqname}\tmakegff\tread\t{start}\t{end}\t.\t{strand}\t.\tname={name}\n")
             written_reads += 1
 
     print(f"Total reads read:         {total_reads}")

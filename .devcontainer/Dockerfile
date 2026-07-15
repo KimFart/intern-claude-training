@@ -1,14 +1,16 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:3
 
-# Build MEME Suite 5.5.9 from source — avoids cross-image shared library conflicts
 # MPI is intentionally excluded (training use; single-node is sufficient)
+# Build MEME Suite 5.5.9 from source — avoids cross-image shared library conflicts
 RUN apt-get update && apt-get install -y \
-      build-essential wget \
+      build-essential wget ca-certificates \
       libxml2-dev libxslt1-dev \
       zlib1g-dev libexpat1-dev \
       perl cpanminus \
       libhtml-template-perl libxml-simple-perl libfile-which-perl \
-    && wget -q "https://meme-suite.org/meme/meme-software/5.5.9/meme-5.5.9.tar.gz" -O /tmp/meme.tar.gz \
+    && curl -fLk --retry 5 --retry-delay 3 --retry-all-errors \
+      "https://meme-suite.org/meme/meme-software/5.5.9/meme-5.5.9.tar.gz" \
+      -o /tmp/meme.tar.gz \
     && tar -xzf /tmp/meme.tar.gz -C /tmp \
     && cd /tmp/meme-5.5.9 \
     && ./configure --prefix=/opt/meme --enable-opt --with-url=https://meme-suite.org 2>&1 \
@@ -39,7 +41,7 @@ RUN conda install -n base -c conda-forge mamba -y && \
 # (solver reports "ossuuid does not exist"). The old conda 2.9.6 that would otherwise be
 # selected can't reach NCBI over TLS. The prebuilt static tarball sidesteps both problems
 # and is the same 3.2.1 the lab's original tutorial used.
-RUN curl -fsSL "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.2.1/sratoolkit.3.2.1-ubuntu64.tar.gz" \
+RUN curl -fsSLk "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.2.1/sratoolkit.3.2.1-ubuntu64.tar.gz" \
       -o /tmp/sratoolkit.tar.gz && \
     tar -xzf /tmp/sratoolkit.tar.gz -C /opt && \
     mv /opt/sratoolkit.3.2.1-ubuntu64 /opt/sratoolkit && \

@@ -70,3 +70,18 @@
 - How pysam perceives a BAM record's FLAG.
 
 ---
+## Session — 2026-07-15
+
+### Done
+- Nearly completed Module 3 and finished Exercise 10.
+- Fixed makegff.py so its output GFF matches the annotation GFF's format and displays strand-sensitively in MetaScope.
+
+### Broke / Struggled
+- The Codespace build kept failing, requiring repeated Dockerfile edits and rebuilds; initially suspected a MEME Suite compatibility issue, but it turned out sratoolkit was failing to install (the rest of Module 3 wasn't blocked, so proceeded anyway).
+- makegff.py wrote the versioned reference name NC_000913.3 (inherited from the reference FASTA header) while the annotation track used the unversioned NC_000913, silently splitting the two tracks onto separate MetaScope chromosome tabs instead of erroring.
+- The GFF score column was hardcoded to 1; changed to . to match the annotation GFF and correctly separate strands in the MetaScope display.
+
+### Learned
+- Understood the principles of ChIP-exo sequencing in more depth.
+
+---
