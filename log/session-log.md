@@ -85,3 +85,15 @@
 - Understood the principles of ChIP-exo sequencing in more depth.
 
 ---
+## Session — 2026-07-15
+
+### Done
+- Reviewed makegff.py, then built scripts/makegff_depth.py (strand-signed 5'-end depth scoring) and scripts/run_pipeline_depth.sh, verified against the real SRR1168122 BAM.
+
+### Broke / Struggled
+- The scipy.signal.find_peaks-based local-maxima version worked correctly but was reverted for being too complicated for the script's purpose.
+
+### Learned
+- 5'-end (tag) counting vs full pileup depth for ChIP-exo border detection, and strand-signed mirrored score tracks as a common visualization convention.
+
+---
