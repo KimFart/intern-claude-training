@@ -97,3 +97,18 @@
 - 5'-end (tag) counting vs full pileup depth for ChIP-exo border detection, and strand-signed mirrored score tracks as a common visualization convention.
 
 ---
+## Session — 2026-07-16
+
+### Done
+- Rewrote makegff.py to delegate depth counting to bedtools genomecov instead of pure-Python pysam counting, and consolidated it into the canonical scripts/makegff.py + scripts/run_pipeline.sh pipeline.
+- Fixed a real bug where bedtools genomecov was silently counting secondary and PCR-duplicate-flagged reads as real signal, inflating ChIP-exo depth; fixed by piping through samtools view -F 0xD04 first.
+- Matched the GFF output format to the fixed notebook's Exercise 6 spec (fiveprime feature type, depth=<count> attribute) and renamed the output convention to SRR1168122_chipexo.gff.
+- Fixed several notebook bugs in 03_ngs_pipeline_with_claude_fixed.ipynb (cells 22, 24, 29) caused by wrong assumptions about the kernel's working directory, and produced the Exercise 9/10 MetaScope deliverable PNG.
+
+### Broke / Struggled
+- Not related to the notebook itself: found several false-positive peaks that resemble an actual true-positive Fur peak; needs more digging into ChIP-exo literature to identify the data correctly.
+
+### Learned
+- How actual ChIP-exo pipeline elements quantify and normalize ChIP-exo coverage.
+
+---

@@ -1,28 +1,52 @@
 #!/usr/bin/env bash
 # ChIP-exo single-end pipeline: FASTQ + reference FASTA -> sorted, indexed BAM -> GFF.
+# The final GFF is a 5'-end read-depth signal track (one row per constant-depth
+# interval, not per read), built by delegating depth counting to
+# `bedtools genomecov -5` inside makegff.py.
 # <reference>/<reads> may be a local file path or an accession to download if missing.
 
 set -euo pipefail
 
 usage() {
-    echo "Usage: $0 <reference> <reads> <sample_name> [output_dir] [threads]" >&2
+    echo "Usage: $0 <reference> <reads> <sample_name> [output_dir] [threads] [-- makegff-options]" >&2
     echo "  reference   path to a reference FASTA, or an NCBI accession (e.g. NC_000913.3) to fetch" >&2
     echo "  reads       path to single-end FASTQ reads, or an SRA accession (e.g. SRR1177157) to fetch" >&2
     echo "  sample_name sample identifier, used to name all output files" >&2
     echo "  output_dir  directory for downloaded/generated files (default: data/reference)" >&2
     echo "  threads     thread count for bowtie2/samtools sort (default: nproc)" >&2
+    echo "  makegff-options  everything after a literal '--' is passed through to" >&2
+    echo "                   makegff.py, e.g.:" >&2
+    echo "                   -- --cap-percentile 99 --log-transform" >&2
     exit 1
 }
 
-if [[ $# -lt 3 || $# -gt 5 ]]; then
+POSITIONAL=()
+MAKEGFF_ARGS=()
+SEEN_SEP=false
+for arg in "$@"; do
+    if $SEEN_SEP; then
+        MAKEGFF_ARGS+=("$arg")
+    elif [[ "$arg" == "--" ]]; then
+        SEEN_SEP=true
+    else
+        POSITIONAL+=("$arg")
+    fi
+done
+
+if [[ ${#POSITIONAL[@]} -lt 3 || ${#POSITIONAL[@]} -gt 5 ]]; then
     usage
 fi
 
-REFERENCE_ARG="$1"
-READS_ARG="$2"
-SAMPLE="$3"
-OUTPUT_DIR="${4:-data/reference}"
-THREADS="${5:-$(nproc)}"
+REFERENCE_ARG="${POSITIONAL[0]}"
+READS_ARG="${POSITIONAL[1]}"
+SAMPLE="${POSITIONAL[2]}"
+OUTPUT_DIR="${POSITIONAL[3]:-data/reference}"
+THREADS="${POSITIONAL[4]:-$(nproc)}"
+
+if ! command -v bedtools &>/dev/null; then
+    echo "Error: 'bedtools' not found on PATH. makegff.py needs it for genomecov." >&2
+    exit 1
+fi
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -96,9 +120,9 @@ samtools sort -@ "$THREADS" "$BAM" -o "$SORTED_BAM"
 echo "Indexing sorted BAM"
 samtools index "$SORTED_BAM"
 
-# --- Step 6: BAM -> GFF ---
-echo "Generating GFF: $GFF"
-python scripts/makegff.py "$SORTED_BAM" "$GFF"
+# --- Step 6: BAM -> GFF, scored by 5'-position read depth ---
+echo "Generating depth-scored GFF: $GFF"
+python scripts/makegff.py "$SORTED_BAM" "$GFF" "${MAKEGFF_ARGS[@]}"
 
 echo "Pipeline complete."
 echo "  Sorted BAM: $SORTED_BAM"
