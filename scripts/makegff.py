@@ -5,7 +5,7 @@
 # 이 bedGraph 결과를 0-based에서 GFF의 1-based 좌표로 변환하고, seqname은 '.'을 기준으로 split하여 첫 번째 부분만 ㄴ남겨 annotation GFF의 seqname과 일치시킨다.
 # -strand의 depth 값은 부호를 반전시켜 MetaScope에서 하나의 트랙 안에서 +/- 신호를 시각적으로 구분할 수 있도록 하였다.
 # --cap-percentile 옵션으로 지정한 백분위수 이상의 depth 값을 잘라내 outlier에 의한 시각적 왜곡을 줄일 수 있고, 
-# --log-transform 옵션으로 log2(depth+1) 변환을 적용해 강한 신호를 정규화할 수 있으며, --round-decimals 옵션으로 log2 변환 후 소수점 자릿수를 지정할 수 있다.
+# --log-transform 옵션으로 log2(depth+1) 변환을 적용해 강한 신호를 정규화할 수 있으며, 변환 후 값은 소수점 4자리로 반올림된다.
 # 최종적으로 seqname, source(makegff), feature(fiveprime), start, end, score(depth), strand, frame(.), attribute(depth=<value>) 형식의 GFF를 출력한다.
 
 # follow-up 1: column 1 now contains the element before '.' by splitting the reference name on '.' and taking the first part.
@@ -19,6 +19,13 @@
 # follow-up 4: depth values can optionally be normalized to reduce the visual impact of outliers,
 #              using percentile-based capping (winsorizing) and/or log2 transform, applied on the
 #              absolute depth value (sign is preserved to keep the strand encoding intact).
+#              log2-transformed values are rounded to 4 decimal places (hardcoded, not a CLI flag)
+#              since raw depth is an integer count -- full float precision (e.g. 3.169925001442312)
+#              is meaningless noise, not extra information.
+# follow-up 5: --separate_strand disables the minus-strand sign negation (used by Module 3/ChIP-exo
+#              to pack +/- signal into one score column). RNA-seq coverage (Module 4) needs true,
+#              unsigned depth on both strands, distinguished only by the GFF strand column -- negating
+#              minus-strand RNA-seq depth would misrepresent it as a trough instead of real coverage.
 
 """Convert a sorted BAM file to a GFF file of 5'-end read-depth signal (ChIP-exo style)."""
 
@@ -46,8 +53,9 @@ def parse_args():
         help="apply log2(depth + 1) transform after capping",
     )
     parser.add_argument(
-        "--round-decimals", type=int, default=0,
-        help="number of decimal places to round to after log-transform (default: 0, i.e. integer)",
+        "--separate_strand", action="store_true",
+        help="keep minus-strand depth positive instead of negating it, so +/- signal is "
+             "distinguished by the GFF strand column rather than by score sign (use for RNA-seq)",
     )
     return parser.parse_args()
 
@@ -107,7 +115,10 @@ def compute_percentile_cap(abs_depths, percentile):
     return sorted_depths[idx]
 
 
-def normalize_depth(depth_val, cap=None, log_transform=False, round_decimals=0):
+LOG_TRANSFORM_ROUND_DECIMALS = 4
+
+
+def normalize_depth(depth_val, cap=None, log_transform=False):
     """Apply optional percentile cap and/or log2 transform, preserving the original sign."""
     sign = -1 if depth_val < 0 else 1
     value = abs(depth_val)
@@ -116,9 +127,7 @@ def normalize_depth(depth_val, cap=None, log_transform=False, round_decimals=0):
         value = min(value, cap)
     if log_transform:
         value = math.log2(value + 1)
-        value = round(value, round_decimals)
-        if round_decimals == 0:
-            value = int(value)
+        value = round(value, LOG_TRANSFORM_ROUND_DECIMALS)
 
     return sign * value
 
@@ -142,7 +151,7 @@ def main():
 
         rows = (
             list(bedgraph_to_gff_rows(plus_bg, "+", negate=False))
-            + list(bedgraph_to_gff_rows(minus_bg, "-", negate=True))
+            + list(bedgraph_to_gff_rows(minus_bg, "-", negate=not args.separate_strand))
         )
         rows.sort(key=lambda r: (r[0], r[1]))  # sort by seqname, start
 
@@ -154,7 +163,7 @@ def main():
 
         with open(args.gff_filepath, "w") as gff:
             for seqname, start, end, depth, strand in rows:
-                norm_depth = normalize_depth(depth, cap=cap, log_transform=args.log_transform, round_decimals=args.round_decimals)
+                norm_depth = normalize_depth(depth, cap=cap, log_transform=args.log_transform)
                 gff.write(f"{seqname}\tmakegff\tfiveprime\t{start}\t{end}\t{norm_depth}\t{strand}\t.\tdepth={norm_depth}\n")
                 written_rows += 1
 

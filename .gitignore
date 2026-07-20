@@ -17,7 +17,7 @@ data/reference/*.sam
 data/reference/*.bam
 data/reference/*.bai
 data/reference/*.bt2
-data/reference/*_chipexo*.gff
+data/reference/*.gff
 
 # MEME output directories
 */meme_output/

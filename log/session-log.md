@@ -112,3 +112,16 @@
 - How actual ChIP-exo pipeline elements quantify and normalize ChIP-exo coverage.
 
 ---
+## Session — 2026-07-20
+
+### Done
+- Ran SRR1168133 (paired-end RNA-seq) through the pipeline: downloaded, aligned, sorted, indexed, and converted to GFF.
+- Made slight modifications in makegff.py.
+
+### Broke / Struggled
+- Nothing broke — everything was okay today.
+
+### Learned
+- Why Fur is important to bacteria, and how it works in three different modes.
+
+---
