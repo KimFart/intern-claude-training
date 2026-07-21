@@ -125,3 +125,19 @@
 - Why Fur is important to bacteria, and how it works in three different modes.
 
 ---
+## Session — 2026-07-21
+
+### Done
+- Filled in Exercise 2's alignment/flag-explanation answers, Exercise 3's MEME/EM summary, and Exercise 4's prediction + verification notes.
+- Downloaded the Nature Comms supplementary data table (Fur binding sites) and fixed a corrupted standalone copy of the extraction script (scripts/sitesformeme.py).
+- Wrote and ran Exercise 5's Biopython extraction script, producing fur_sites_for_meme.fasta (143/143 records).
+- Fixed Exercise 2's alignment flags, adding --no-mixed/--no-discordant to bowtie2 and regenerating rnaseq.gff.
+
+### Broke / Struggled
+- Step 3 of Exercise 2 required a `--separate_strand` flag for makegff.py that wasn't mentioned in makegff.py's requirements back in Module 3.
+
+### Learned
+- bowtie2 concordance flags (--no-mixed/--no-discordant) and why they matter for paired-end RNA-seq specifically.
+- E-value vs P-value, and how MEME's Expectation-Maximization algorithm iterates.
+
+---
