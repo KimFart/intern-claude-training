@@ -141,3 +141,15 @@
 - E-value vs P-value, and how MEME's Expectation-Maximization algorithm iterates.
 
 ---
+## Session — 2026-07-22
+
+### Done
+- Ran MEME and fixed a genome-version bug.
+
+### Broke / Struggled
+- MEME kept ranking a fake (GC-rich) motif as the top hit.
+
+### Learned
+- Results can't be trusted without a positive control.
+
+---
