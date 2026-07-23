@@ -389,7 +389,7 @@
 </background_frequencies>
 </model>
 <motifs>
-<motif id="motif_1" name="WTRAKAATYATTCTCAWTYWBRWY" alt="MEME-1" width="24" sites="141" ic="14.9" re="13.6" llr="1329" p_value="5.8e-505" e_value="1.0e-191" bayes_threshold="6.39927" elapsed_time="6.895555">
+<motif id="motif_1" name="WTRAKAATYATTCTCAWTYWBRWY" alt="MEME-1" width="24" sites="141" ic="14.9" re="13.6" llr="1329" p_value="5.8e-505" e_value="1.0e-191" bayes_threshold="6.39927" elapsed_time="9.645786">
 <scores>
 <alphabet_matrix>
 <alphabet_array>
@@ -4922,7 +4922,7 @@
 </contributing_site>
 </contributing_sites>
 </motif>
-<motif id="motif_2" name="GCGGCGTGAHCGCATTRACHGGC" alt="MEME-2" width="23" sites="9" ic="26.5" re="28.1" llr="175" p_value="3.5e-039" e_value="1.2e-005" bayes_threshold="10.427" elapsed_time="11.128943">
+<motif id="motif_2" name="GCGGCGTGAHCGCATTRACHGGC" alt="MEME-2" width="23" sites="9" ic="26.5" re="28.1" llr="175" p_value="3.5e-039" e_value="1.2e-005" bayes_threshold="10.427" elapsed_time="15.812486">
 <scores>
 <alphabet_matrix>
 <alphabet_array>
@@ -5474,7 +5474,7 @@
 </contributing_site>
 </contributing_sites>
 </motif>
-<motif id="motif_3" name="ADATMCYTTGCTATC" alt="MEME-3" width="15" sites="9" ic="23.6" re="23.1" llr="144" p_value="2.3e-038" e_value="1.8e-004" bayes_threshold="10.5662" elapsed_time="15.260446">
+<motif id="motif_3" name="ADATMCYTTGCTATC" alt="MEME-3" width="15" sites="9" ic="23.6" re="23.1" llr="144" p_value="2.3e-038" e_value="1.8e-004" bayes_threshold="10.5662" elapsed_time="22.109670">
 <scores>
 <alphabet_matrix>
 <alphabet_array>

@@ -1,3 +1,19 @@
+## Session — 2026-07-23
+
+### Done
+- Diagnosed and fixed a genome-version coordinate bug in sitesformeme.py (ChIP-exo sites were extracted against NC_000913.3 instead of Seo et al. 2014's NC_000913.2), re-ran MEME, and completed the Exercise 6 answer cell covering E-value, motif logo shape, and biological meaning.
+- Cross-validated MEME-1's top-ranked sites against positive_control()'s known-strong Fur-box sites and found they matched (ryhB, mntH).
+
+### Broke / Struggled
+- The original NC_000913.3-based MEME run had significant E-values but none of the 3 motifs were biologically convincing (AT-poor, low site coverage) — looked fine until checked against a positive control.
+- positive_control() caught the bug: 0/5 known-strong Fur-box sites passed under the .3 coordinates.
+- Codespace budget limit is maxed, so had to quit the codespace.
+
+### Learned
+- A statistically significant E-value alone doesn't guarantee biological validity — a wrong motif can still score well; a positive control is needed to actually trust it.
+- Genome build/version matters for ChIP-exo coordinates: NC_000913.2 vs .3 differ by corrected indels, which can shift peak coordinates and destroy motif signal.
+
+---
 ## Session — 2026-07-08
 
 ### Done
