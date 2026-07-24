@@ -184,3 +184,18 @@
 - Just following along with a paper's methodology is harder than it looks.
 
 ---
+## Session — 2026-07-24
+
+### Done
+- Wrote and verified scripts/tssdistance.py (Exercise 7) and scripts/fursitesgff.py (Exercise 8).
+- Wrote the Exercise 9 and Exercise 10 answers.
+
+### Broke / Struggled
+- makegff.py's --flip logic has a dict-insertion-order bug that writes all "-" strand rows before "+" strand rows in rnaseq.gff, making MetaScope stack them in an inconvenient order.
+- MetaScope 1.2.1's Ctrl+Shift+C/Ctrl+Shift+H shortcuts didn't work on Windows; the right-click context menu had working "set color"/"set height" alternatives instead, though ended up not using them.
+
+### Learned
+- The variety of ways a single TF (Fur) can regulate genes (direct/indirect, repression/activation).
+- How to study transcriptional regulation by combining ChIP-exo binding-site data with RNA-seq data.
+
+---
