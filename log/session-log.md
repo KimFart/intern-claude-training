@@ -199,3 +199,15 @@
 - How to study transcriptional regulation by combining ChIP-exo binding-site data with RNA-seq data.
 
 ---
+## Session — 2026-07-30
+
+### Done
+- Established a research question that can be answered from existing data.
+
+### Broke / Struggled
+- The `# of motifs` from the supplementary data didn't exactly match with my data due to program running conditions.
+
+### Learned
+- Fur binding mechanism.
+
+---
