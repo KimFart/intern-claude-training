@@ -9,7 +9,7 @@ dist/
 build/
 .env
 
-# Downloaded and generated data files (not committed; lives in data/reference/)
+# Downloaded and generated data files (not committed; lives in data/reference/ and data/module5/)
 data/reference/*.fastq
 data/reference/*.fasta
 data/reference/*.fa
@@ -18,6 +18,11 @@ data/reference/*.bam
 data/reference/*.bai
 data/reference/*.bt2
 data/reference/*.gff
+data/module5/*.fastq
+data/module5/*.sam
+data/module5/*.bam
+data/module5/*.bai
+data/module5/*.gff
 
 # MEME output directories
 */meme_output/

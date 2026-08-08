@@ -1,80 +1,80 @@
-Peak	Transcription_Unit	n_motifs	S_N_ratio	paper_distance_to_tss	matched_locus_tag	matched_gene	matched_start	matched_end	matched_strand	computed_distance_bp
-P3	fhuACDB	1	4.6	-194	b0150	fhuA	167484	169727	+	236.0
-P4	fhuACDB	3	37.3	19	b0150	fhuA	167484	169727	+	23.0
-P7	map	2	5.4	-41	b0168	map	188712	189506	-	88.0
-P9	pepD	1	5.83	-33	b0237	pepD	254259	255716	-	93.0
-P10	argF-yagI	1	3.27	-188	b0273	argF	288525	289529	-	223.0
-P11	ybaN	3	15.17	-34	b0467	priC	489509	490036	-	11.0
-P12	adk	1	10.53	47.5	b0474	adk	496399	497043	+	11.5
-P15	fepA-entD	2	108.87	11.5	b0585	fes	612038	613162	+	159.5
-P16	fes-ybdZ-entF-fepE	2	81.53	7	b0585	fes	612038	613162	+	121.0
-P17	fepD-fepG-fepC	3	22.77	-36	b0590	fepD	620408	621412	-	9.0
-P18	entS	3	68.43	-29	b0590	fepD	620408	621412	-	40.0
-P19	fepB	1	91.97	11.5	b0593	entC	624108	625283	+	169.5
-P20	fepB	1	93.33	16	b0593	entC	624108	625283	+	142.0
-P21	entCEBAH	3	39.83	-5	b0593	entC	624108	625283	+	59.0
-P22	entCEBAH	2	82.63	26.5	b0593	entC	624108	625283	+	27.5
-P25	nagBACD	1	1.67	14	b0676	nagC	699597	700817	-	257.0
-P28	gpmA	2	24.47	-14	b0755	gpmA	786066	786818	-	51.0
-P29	fiu-ybiX	2	63.3	-16	b0805	fiu	838472	840754	-	133.0
-P33	aspC	1	1.53	37	b0928	aspC	983742	984932	-	3.0
-P34	efeUOB	1	23.87	-8	b1016	efeU_1	1080579	1080689	+	57.0
-P37	fhuE	2	342.6	-19	b1102	fhuE	1158585	1160774	-	115.0
-P42	tonB	2	2.47	-15	b1252	tonB	1309113	1309832	+	50.0
-P43	acnA	1	5.17	45	b4523	yciX	1333315	1333482	+	178.0
-P47	yncE	3	61.3	-	b1452	yncE	1521331	1522392	+	87.5
-P48	adhP	1	2.33	99	b1478	adhP	1550852	1551862	-	57.0
-P49	yddA-yddB	3	50.17	-	b1496	yddA	1575681	1577366	-	13.0
-P50	yddA-yddB	2	37.13	-	b1496	yddA	1575681	1577366	-	1.0
-P51	ynfD	2	2.5	76.5	b1585	ynfC	1654771	1655481	-	33.5
-P55	sufABCDSE	2	2.97	-37	b1684	sufA	1762042	1762410	-	69.0
-P56	ydiE	2	50.3	-16	b1705	ydiE	1787637	1787828	+	26.0
-P62	yebN	2	2.77	-82.5	b1821	yebN	1903712	1904278	+	311.5
-P65	ftnB	1	8.6	138	b1902	ftnB	1984949	1985452	+	12.0
-P66	ftnB	1	9.07	152	b1902	ftnB	1984949	1985452	+	26.0
-P67	ftnA	2	3.33	-71	b1905	ftnA	1986740	1987237	+	105.0
-P68	sdiA	2	10.73	4	b1916	sdiA	1994134	1994856	-	15.0
-P70	yoeA	4	72.33	-	b1995	yoeA	2066659	2067051	+	65.0
-P71	yoeA	4	17.77	-	b1995	yoeA	2066659	2067051	+	27.0
-P72	cirA	2	278.9	-17	b2155	cirA	2242800	2244791	-	177.0
-P73	cirA	2	298.23	-25	b2155	cirA	2242800	2244791	-	198.0
-P74	yojI	2	18.63	-28	b2211	yojI	2304994	2306637	-	54.0
-P75	yojI	2	26.13	-55	b2211	yojI	2304994	2306637	-	81.0
-P80	yfcV	2	4.83	-	b2339	yfcV	2453105	2453668	-	483.0
-P81	mntH	1	79.5	-17	b2392	mntH	2509490	2510728	-	45.0
-P82	mntH	1	75.0	-24	b2392	mntH	2509490	2510728	-	52.0
-P85	recN	1	4.47	80	b2616	recN	2749817	2751478	+	44.0
-P86	recN	1	4.0	98.5	b2616	recN	2749817	2751478	+	62.5
-P89	ygaQ_2	1	1.93	-	b4462	ygaQ_2	2784770	2785456	+	6.5
-P90	nrdHIEF	3	41.1	69	b2673	nrdH	2798745	2798990	+	2.0
-P91	nrdHIEF	3	36.43	88	b2673	nrdH	2798745	2798990	+	21.0
-P95	ygfK-ssnA	1	4.07	-126.5	b2878	ygfK	3014082	3017180	+	194.5
-P96	hybOABCDEFG	1	17.1	-129	b2997	hybO	3143165	3144283	-	231.0
-P97	exbBD	2	10.67	-61.5	b3006	exbB	3149272	3150006	-	91.5
-P98	yqjH	1	150.97	-1	b3070	yqjH	3213749	3214513	-	48.0
-P99	yqjH	1	171.63	-20	b3070	yqjH	3213749	3214513	-	67.0
-P100	yhaJ	1	3.7	35	b3105	yhaJ	3251340	3252236	-	12.0
-P102	yrbL	1	4.27	-104	b3207	yrbL	3346474	3347106	+	135.0
-P105	ompR	1	2.9	-35	b3406	greB	3534834	3535310	+	22.0
-P106	feoABC	3	25.3	-5	b3408	feoA	3538185	3538412	+	111.0
-P108	ryhB	3	254.23	-1.5	b4451	ryhB	3578950	3579039	-	1.5
-P109	ryhB	3	273.93	-21	b4451	ryhB	3578950	3579039	-	21.0
-P111	yhhK	1	5.23	-5.5	b3459	yhhK	3596007	3596390	+	161.5
-P117	emrD	1	4.6	-7	b3673	emrD	3851945	3853129	+	84.0
-P118	rmuC	1	2.3	-	b3832	rmuC	4015356	4016783	+	14.0
-P123	sodA	3	68.73	-53	b3908	sodA	4098833	4099453	+	104.0
-P124	sodA	3	64.13	-46	b3908	sodA	4098833	4099453	+	97.0
-P125	cdh	1	1.73	-61.5	b3918	cdh	4107953	4108708	+	84.5
-P126	zapB	1	2.93	148	b3928	zapB	4116538	4116783	+	19.0
-P127	yjbJ	1	2.87	-	b4045	yjbJ	4257260	4257469	+	26.5
-P133	fecABCDE	2	8.2	-12.5	b4291	fecA	4512376	4514700	-	62.5
-P134	fecIR	2	35.57	0	b4293	fecI	4515737	4516258	-	47.0
-P135	fecIR	2	30.07	-19	b4293	fecI	4515737	4516258	-	66.0
-P137	yjhIH	1	4.53	-	b4299	yjhI	4523038	4523826	-	147.5
-P138	uxuAB	1	1.53	-19	b4322	uxuA	4549659	4550843	+	137.0
-P139	yjiT	1	51.0	-170	b4342	yjiT	4570437	4571954	+	222.0
-P140	yjiT	1	41.3	-150	b4342	yjiT	4570437	4571954	+	202.0
-P141	fhuF	4	254.4	-6	b4367	fhuF	4602898	4603686	-	37.0
-P142	fhuF	4	54.7	-51	b4567	yjjZ	4603827	4604063	+	59.0
-P143	yjjZ	4	76.27	-13.5	b4567	yjjZ	4603827	4604063	+	40.5
-P144	yjjZ	3	64.43	11	b4567	yjjZ	4603827	4604063	+	16.0
+Peak	Transcription_Unit	n_motifs	S_N_ratio	paper_distance_to_tss	TU_gene_parse	mapping_status	matched_locus_tag	matched_gene	matched_start	matched_end	matched_strand	matched_tss	computed_distance_bp
+P3	fhuACDB	1	4.6	-194	fhua+fhuc+fhud+fhub	mapped_TU_constrained_paper_distance	b0150	fhuA	167484	169727	+	167484.0	236.0
+P4	fhuACDB	3	37.3	19	fhua+fhuc+fhud+fhub	mapped_TU_constrained_paper_distance	b0150	fhuA	167484	169727	+	167484.0	23.0
+P7	map	2	5.4	-41	map	mapped_TU_constrained_paper_distance	b0168	map	188712	189506	-	189506.0	88.0
+P9	pepD	1	5.83	-33	pepd	mapped_TU_constrained_paper_distance	b0237	pepD	254259	255716	-	255716.0	93.0
+P10	argF-yagI	1	3.27	-188	argf+yagi	mapped_TU_constrained_paper_distance	b0273	argF	288525	289529	-	289529.0	223.0
+P11	ybaN	3	15.17	-34	yban	mapped_TU_constrained_paper_distance	b0468	ybaN	490106	490483	+	490106.0	59.0
+P12	adk	1	10.53	47.5	adk	mapped_TU_constrained_paper_distance	b0474	adk	496399	497043	+	496399.0	11.5
+P15	fepA-entD	2	108.87	11.5	fepa+entd	mapped_TU_constrained_paper_distance	b0584	fepA	609477	611717	-	611717.0	161.5
+P16	fes-ybdZ-entF-fepE	2	81.53	7	fes+ybdz+entf+fepe	mapped_TU_constrained_paper_distance	b0585	fes	612038	613162	+	612038.0	121.0
+P17	fepD-fepG-fepC	3	22.77	-36	fepd+fepg+fepc	mapped_TU_constrained_paper_distance	b0590	fepD	620408	621412	-	621412.0	9.0
+P18	entS	3	68.43	-29	ents	mapped_TU_constrained_paper_distance	b0591	entS	621523	622773	+	621523.0	71.0
+P19	fepB	1	91.97	11.5	fepb	mapped_TU_constrained_paper_distance	b0592	fepB	622777	623733	-	623733.0	205.5
+P20	fepB	1	93.33	16	fepb	mapped_TU_constrained_paper_distance	b0592	fepB	622777	623733	-	623733.0	233.0
+P21	entCEBAH	3	39.83	-5	entc+ente+entb+enta+enth	mapped_TU_constrained_paper_distance	b0593	entC	624108	625283	+	624108.0	59.0
+P22	entCEBAH	2	82.63	26.5	entc+ente+entb+enta+enth	mapped_TU_constrained_paper_distance	b0593	entC	624108	625283	+	624108.0	27.5
+P25	nagBACD	1	1.67	14	nagb+naga+nagc+nagd	mapped_TU_constrained_paper_distance	b0676	nagC	699597	700817	-	700817.0	257.0
+P28	gpmA	2	24.47	-14	gpma	mapped_TU_constrained_paper_distance	b0755	gpmA	786066	786818	-	786818.0	51.0
+P29	fiu-ybiX	2	63.3	-16	fiu+ybix	mapped_TU_constrained_paper_distance	b0805	fiu	838472	840754	-	840754.0	133.0
+P33	aspC	1	1.53	37	aspc	mapped_TU_constrained_paper_distance	b0928	aspC	983742	984932	-	984932.0	3.0
+P34	efeUOB	1	23.87	-8	efeu1	mapped_curated_override	b1016	efeU_1	1080579	1080689	+	1080579.0	57.0
+P37	fhuE	2	342.6	-19	fhue	mapped_TU_constrained_paper_distance	b1102	fhuE	1158585	1160774	-	1160774.0	115.0
+P42	tonB	2	2.47	-15	tonb	mapped_TU_constrained_paper_distance	b1252	tonB	1309113	1309832	+	1309113.0	50.0
+P43	acnA	1	5.17	45	acna	mapped_TU_constrained_paper_distance	b1276	acnA	1333855	1336530	+	1333855.0	362.0
+P47	yncE	3	61.3	-	ynce	mapped_TU_constrained_primary_TSS	b1452	yncE	1521331	1522392	+	1521331.0	87.5
+P48	adhP	1	2.33	99	adhp	mapped_TU_constrained_paper_distance	b1478	adhP	1550852	1551862	-	1551862.0	57.0
+P49	yddA-yddB	3	50.17	-	ydda+yddb	mapped_TU_constrained_primary_TSS	b1496	yddA	1575681	1577366	-	1577366.0	13.0
+P50	yddA-yddB	2	37.13	-	ydda+yddb	mapped_TU_constrained_primary_TSS	b1496	yddA	1575681	1577366	-	1577366.0	1.0
+P51	ynfD	2	2.5	76.5	ynfd	mapped_TU_constrained_paper_distance	b1586	ynfD	1655589	1655894	+	1655589.0	74.5
+P55	sufABCDSE	2	2.97	-37	sufa+sufb+sufc+sufd+sufs+sufe	mapped_TU_constrained_paper_distance	b1684	sufA	1762042	1762410	-	1762410.0	69.0
+P56	ydiE	2	50.3	-16	ydie	mapped_TU_constrained_paper_distance	b1705	ydiE	1787637	1787828	+	1787637.0	26.0
+P62	yebN	2	2.77	-82.5	yebn	mapped_TU_constrained_paper_distance	b1821	yebN	1903712	1904278	+	1903712.0	311.5
+P65	ftnB	1	8.6	138	ftnb	mapped_TU_constrained_paper_distance	b1902	ftnB	1984949	1985452	+	1984949.0	12.0
+P66	ftnB	1	9.07	152	ftnb	mapped_TU_constrained_paper_distance	b1902	ftnB	1984949	1985452	+	1984949.0	26.0
+P67	ftnA	2	3.33	-71	ftna	mapped_TU_constrained_paper_distance	b1905	ftnA	1986740	1987237	+	1986740.0	105.0
+P68	sdiA	2	10.73	4	sdia	mapped_TU_constrained_paper_distance	b1916	sdiA	1994134	1994856	-	1994856.0	15.0
+P70	yoeA	4	72.33	-	yoea	mapped_TU_constrained_primary_TSS	b1995	yoeA	2066659	2067051	+	2066659.0	65.0
+P71	yoeA	4	17.77	-	yoea	mapped_TU_constrained_primary_TSS	b1995	yoeA	2066659	2067051	+	2066659.0	27.0
+P72	cirA	2	278.9	-17	cira	mapped_TU_constrained_paper_distance	b2155	cirA	2242800	2244791	-	2244791.0	177.0
+P73	cirA	2	298.23	-25	cira	mapped_TU_constrained_paper_distance	b2155	cirA	2242800	2244791	-	2244791.0	198.0
+P74	yojI	2	18.63	-28	yoji	mapped_TU_constrained_paper_distance	b2211	yojI	2304994	2306637	-	2306637.0	54.0
+P75	yojI	2	26.13	-55	yoji	mapped_TU_constrained_paper_distance	b2211	yojI	2304994	2306637	-	2306637.0	81.0
+P80	yfcV	2	4.83	-	yfcv	mapped_TU_constrained_primary_TSS	b2339	yfcV	2453105	2453668	-	2453668.0	483.0
+P81	mntH	1	79.5	-17	mnth	mapped_TU_constrained_paper_distance	b2392	mntH	2509490	2510728	-	2510728.0	45.0
+P82	mntH	1	75.0	-24	mnth	mapped_TU_constrained_paper_distance	b2392	mntH	2509490	2510728	-	2510728.0	52.0
+P85	recN	1	4.47	80	recn	mapped_TU_constrained_paper_distance	b2616	recN	2749817	2751478	+	2749817.0	44.0
+P86	recN	1	4.0	98.5	recn	mapped_TU_constrained_paper_distance	b2616	recN	2749817	2751478	+	2749817.0	62.5
+P89	ygaQ_2	1	1.93	-	ygaq2	mapped_TU_constrained_primary_TSS	b4462	ygaQ_2	2784770	2785456	+	2784770.0	6.5
+P90	nrdHIEF	3	41.1	69	nrdh+nrdi+nrde+nrdf	mapped_TU_constrained_paper_distance	b2673	nrdH	2798745	2798990	+	2798745.0	2.0
+P91	nrdHIEF	3	36.43	88	nrdh+nrdi+nrde+nrdf	mapped_TU_constrained_paper_distance	b2673	nrdH	2798745	2798990	+	2798745.0	21.0
+P95	ygfK-ssnA	1	4.07	-126.5	ygfk+ssna	mapped_TU_constrained_paper_distance	b2878	ygfK	3014082	3017180	+	3014082.0	194.5
+P96	hybOABCDEFG	1	17.1	-129	hybo+hyba+hybb+hybc+hybd+hybe+hybf+hybg	mapped_TU_constrained_paper_distance	b2997	hybO	3143165	3144283	-	3144283.0	231.0
+P97	exbBD	2	10.67	-61.5	exbb+exbd	mapped_TU_constrained_paper_distance	b3006	exbB	3149272	3150006	-	3150006.0	91.5
+P98	yqjH	1	150.97	-1	yqjh	mapped_TU_constrained_paper_distance	b3070	yqjH	3213749	3214513	-	3214513.0	48.0
+P99	yqjH	1	171.63	-20	yqjh	mapped_TU_constrained_paper_distance	b3070	yqjH	3213749	3214513	-	3214513.0	67.0
+P100	yhaJ	1	3.7	35	yhaj	mapped_TU_constrained_paper_distance	b3105	yhaJ	3251340	3252236	-	3252236.0	12.0
+P102	yrbL	1	4.27	-104	yrbl	mapped_TU_constrained_paper_distance	b3207	yrbL	3346474	3347106	+	3346474.0	135.0
+P105	ompR	1	2.9	-35	ompr	mapped_TU_constrained_paper_distance	b3405	ompR	3533887	3534606	-	3534606.0	206.0
+P106	feoABC	3	25.3	-5	feoa+feob+feoc	mapped_TU_constrained_paper_distance	b3408	feoA	3538185	3538412	+	3538185.0	111.0
+P108	ryhB	3	254.23	-1.5	ryhb	mapped_TU_constrained_paper_distance	b4451	ryhB	3578950	3579039	-	3579039.0	1.5
+P109	ryhB	3	273.93	-21	ryhb	mapped_TU_constrained_paper_distance	b4451	ryhB	3578950	3579039	-	3579039.0	21.0
+P111	yhhK	1	5.23	-5.5	yhhk	mapped_TU_constrained_paper_distance	b3459	yhhK	3596007	3596390	+	3596007.0	161.5
+P117	emrD	1	4.6	-7	emrd	mapped_TU_constrained_paper_distance	b3673	emrD	3851945	3853129	+	3851945.0	84.0
+P118	rmuC	1	2.3	-	rmuc	mapped_TU_constrained_primary_TSS	b3832	rmuC	4015356	4016783	+	4015356.0	14.0
+P123	sodA	3	68.73	-53	soda	mapped_TU_constrained_paper_distance	b3908	sodA	4098833	4099453	+	4098833.0	104.0
+P124	sodA	3	64.13	-46	soda	mapped_TU_constrained_paper_distance	b3908	sodA	4098833	4099453	+	4098833.0	97.0
+P125	cdh	1	1.73	-61.5	cdh	mapped_TU_constrained_paper_distance	b3918	cdh	4107953	4108708	+	4107953.0	84.5
+P126	zapB	1	2.93	148	zapb	mapped_TU_constrained_paper_distance	b3928	zapB	4116538	4116783	+	4116538.0	19.0
+P127	yjbJ	1	2.87	-	yjbj	mapped_TU_constrained_primary_TSS	b4045	yjbJ	4257260	4257469	+	4257260.0	26.5
+P133	fecABCDE	2	8.2	-12.5	feca+fecb+fecc+fecd+fece	mapped_TU_constrained_paper_distance	b4291	fecA	4512376	4514700	-	4514700.0	62.5
+P134	fecIR	2	35.57	0	feci+fecr	mapped_TU_constrained_paper_distance	b4293	fecI	4515737	4516258	-	4516258.0	47.0
+P135	fecIR	2	30.07	-19	feci+fecr	mapped_TU_constrained_paper_distance	b4293	fecI	4515737	4516258	-	4516258.0	66.0
+P137	yjhIH	1	4.53	-	yjhi+yjhh	mapped_TU_constrained_primary_TSS	b4299	yjhI	4523038	4523826	-	4523826.0	147.5
+P138	uxuAB	1	1.53	-19	uxua+uxub	mapped_TU_constrained_paper_distance	b4322	uxuA	4549659	4550843	+	4549659.0	137.0
+P139	yjiT	1	51.0	-170	yjit	mapped_TU_constrained_paper_distance	b4342	yjiT	4570437	4571954	+	4570437.0	222.0
+P140	yjiT	1	41.3	-150	yjit	mapped_TU_constrained_paper_distance	b4342	yjiT	4570437	4571954	+	4570437.0	202.0
+P141	fhuF	4	254.4	-6	fhuf	mapped_TU_constrained_paper_distance	b4367	fhuF	4602898	4603686	-	4603686.0	37.0
+P142	fhuF	4	54.7	-51	fhuf	mapped_TU_constrained_paper_distance	b4367	fhuF	4602898	4603686	-	4603686.0	82.0
+P143	yjjZ	4	76.27	-13.5	yjjz	mapped_TU_constrained_paper_distance	b4567	yjjZ	4603827	4604063	+	4603827.0	40.5
+P144	yjjZ	3	64.43	11	yjjz	mapped_TU_constrained_paper_distance	b4567	yjjZ	4603827	4604063	+	4603827.0	16.0

@@ -211,3 +211,18 @@
 - Fur binding mechanism.
 
 ---
+## Session — 2026-08-08
+
+### Done
+- Fixed the site_to_gene TU-parsing bug.
+- Added an override file for TUs that fail to parse.
+- Reorganized file paths so data/module5 and data/reference are consistent.
+
+### Broke / Struggled
+- File output locations weren't consistent, which caused some confusion for a while.
+
+### Learned
+- The pseudoreplication statistics concept.
+- The rho and Kruskal-Wallis statistical concepts.
+
+---

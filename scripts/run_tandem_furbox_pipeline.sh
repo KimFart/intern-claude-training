@@ -3,7 +3,10 @@
 #
 # 1. Download + align + sort + index SRR1168134 and SRR1168136 (the second
 #    biological replicate of each RNA-seq condition), reusing the same
-#    paired-end recipe Module 4 used for SRR1168133/SRR1168135.
+#    paired-end recipe Module 4 used for SRR1168133/SRR1168135. All four
+#    replicates' sorted BAM/GFF live under data/module5/ (self-contained for
+#    this pipeline), while the shared genome index/annotation stay in
+#    data/reference/.
 # 2. Regenerate all four RNA-seq GFFs with notebooks/makegff.py (the
 #    lab-supplied script, NOT scripts/makegff.py) WITHOUT --log_scale, since
 #    the hypothesis-table step needs linear, summable depth.
@@ -16,7 +19,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-OUT="data/reference"
+OUT="data/module5"
+REF_DIR="data/reference"  # bowtie2 genome index lives here -- shared across modules, not a module5 product
 THREADS="${THREADS:-$(nproc)}"
 export PATH="/opt/sratoolkit/bin:$PATH"
 
@@ -32,7 +36,7 @@ fetch_replicate() {
     fi
     echo "[$srr] Aligning (paired-end, NC_000913.2_index)..."
     bowtie2 --very-fast -X 1000 -3 3 -p "$THREADS" --no-mixed --no-discordant \
-        -x "$OUT/NC_000913.2_index" \
+        -x "$REF_DIR/NC_000913.2_index" \
         -1 "$OUT/${srr}_1.fastq" -2 "$OUT/${srr}_2.fastq" \
         -S "$OUT/${srr}.sam"
     samtools view -bS "$OUT/${srr}.sam" -o "$OUT/${srr}.bam"
