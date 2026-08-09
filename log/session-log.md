@@ -226,3 +226,41 @@
 - The rho and Kruskal-Wallis statistical concepts.
 
 ---
+## Session — 2026-08-08
+
+### Done
+- Filled in Part 4's five step answers.
+- Re-ran the H1/H2 stats.
+
+### Broke / Struggled
+- Data doesn't support the hypothesis statistically; the difference between H1 and H2's rho was statistically insignificant.
+
+### Learned
+- Nothing new this session.
+
+---
+## Session — 2026-08-08
+
+### Done
+- Wrote Figure 1 and Figure 2 captions for Part 5.
+
+### Broke / Struggled
+- Nothing.
+
+### Learned
+- Nothing.
+
+---
+## Session — 2026-08-08
+
+### Done
+- Fixed Results section wording.
+- Wrote Interpretation and Limitations sections.
+
+### Broke / Struggled
+- Realized the "tandem Fur box" terminology is awkward/imprecise.
+
+### Learned
+- Shouldn't be easily swayed by Claude's sweet-talking/flattery.
+
+---
