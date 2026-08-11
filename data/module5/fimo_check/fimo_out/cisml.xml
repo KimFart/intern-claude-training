@@ -1,0 +1,1694 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!-- http://zlab.bu.edu/~phaverty/SupplementalData/CisML/cisml.dtd -->
+<!DOCTYPE cis-element-search[
+<!ELEMENT cis-element-search (program-name, parameters, (pattern | multi-pattern-scan)*)>
+<!ELEMENT program-name (#PCDATA)>
+<!ELEMENT parameters (
+  pattern-file, 
+  sequence-file, 
+  background-seq-file?,
+  pattern-pvalue-cutoff?,
+  sequence-pvalue-cutoff?,
+  site-pvalue-cutoff?,
+  sequence-filtering,
+  ANY*
+ )>
+<!ELEMENT command-line (#PCDATA)>
+<!ELEMENT pattern-file (#PCDATA)>
+<!ELEMENT sequence-file (#PCDATA)>
+<!ELEMENT background-seq-file (#PCDATA)>
+<!ELEMENT pattern-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-pvalue-cutoff (#PCDATA)>
+<!ELEMENT site-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-filtering EMPTY>
+<!ELEMENT multi-pattern-scan (pattern+, ANY*)>
+<!ELEMENT pattern (scanned-sequence+, ANY*)>
+<!ELEMENT scanned-sequence (matched-element*, ANY*)>
+<!ELEMENT matched-element (sequence)>
+<!ELEMENT sequence (#PCDATA)>
+<!ATTLIST cis-element-search
+xmlns:xsi CDATA #IMPLIED
+xmlns:mem CDATA #IMPLIED
+xsi:schemaLocation CDATA #IMPLIED
+>
+<!ATTLIST sequence-filtering
+on-off CDATA #REQUIRED
+type CDATA #IMPLIED
+>
+<!ATTLIST multi-pattern-scan
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+>
+<!ATTLIST pattern
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+pvalue CDATA #IMPLIED
+score CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST scanned-sequence
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+length CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST matched-element
+start CDATA #REQUIRED
+stop CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+clusterid CDATA #IMPLIED
+>
+
+]>
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<command-line>fimo --oc data/module5/fimo_check/fimo_out --bfile --motif-- --thresh 1e-4 data/module5/fimo_check/meme_w21/meme.txt data/reference/fur_sites_for_meme.fasta</command-line>
+<pattern-file>data/module5/fimo_check/meme_w21/meme.txt</pattern-file>
+<sequence-file>data/reference/fur_sites_for_meme.fasta</sequence-file>
+<site-pvalue-cutoff>0.0001</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="AWTGATAATCATTCTCAWTCA" name="MEME-1">
+<scanned-sequence accession="P1_NC_000913.2" name="P1_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P2_NC_000913.2" name="P2_NC_000913.2">
+<matched-element start="146482" stop="146502" score="11.2237" pvalue="5.17e-05">
+<sequence>AACAGAAATAATTCTCGAACC</sequence>
+<mem:qvalue>0.00826</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P3_NC_000913.2" name="P3_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P4_NC_000913.2" name="P4_NC_000913.2">
+<matched-element start="167430" stop="167450" score="17.8816" pvalue="2.35e-07">
+<sequence>TATAATAATCATTCTCGTTTA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+<matched-element start="167448" stop="167428" score="11.2368" pvalue="5.12e-05">
+<sequence>AACGAGAATGATTATTATAAA</sequence>
+<mem:qvalue>0.00825</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P5_NC_000913.2" name="P5_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P6_NC_000913.2" name="P6_NC_000913.2">
+<matched-element start="177000" stop="177020" score="12.6711" pvalue="2e-05">
+<sequence>TTCAACGCCCATTCTCATCCA</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P7_NC_000913.2" name="P7_NC_000913.2">
+<matched-element start="189599" stop="189579" score="17.7632" pvalue="2.66e-07">
+<sequence>ATTCAGAATGATTCTCAATTT</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P8_NC_000913.2" name="P8_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P9_NC_000913.2" name="P9_NC_000913.2">
+<matched-element start="255829" stop="255809" score="11.4868" pvalue="4.38e-05">
+<sequence>ATAAAGTGGTATTCTCAAACA</sequence>
+<mem:qvalue>0.00716</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P10_NC_000913.2" name="P10_NC_000913.2">
+<matched-element start="289751" stop="289731" score="17.5921" pvalue="3.17e-07">
+<sequence>AAGGCCAATCATTCTCATTTC</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P11_NC_000913.2" name="P11_NC_000913.2">
+<matched-element start="490072" stop="490052" score="12.8947" pvalue="1.71e-05">
+<sequence>TAGCATAACAATTATCATTTT</sequence>
+<mem:qvalue>0.00408</mem:qvalue>
+</matched-element>
+<matched-element start="490066" stop="490046" score="12.4868" pvalue="2.27e-05">
+<sequence>AACAATTATCATTTTCATTGA</sequence>
+<mem:qvalue>0.00448</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P12_NC_000913.2" name="P12_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P13_NC_000913.2" name="P13_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P14_NC_000913.2" name="P14_NC_000913.2">
+<matched-element start="562570" stop="562550" score="14.3816" pvalue="5.67e-06">
+<sequence>AAAGAGTACTCTTCTCATTCT</sequence>
+<mem:qvalue>0.00194</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P15_NC_000913.2" name="P15_NC_000913.2">
+<matched-element start="611880" stop="611900" score="14.6974" pvalue="4.41e-06">
+<sequence>AATGCAAATAGTTATCAATAA</sequence>
+<mem:qvalue>0.00168</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P16_NC_000913.2" name="P16_NC_000913.2">
+<matched-element start="611880" stop="611900" score="14.6974" pvalue="4.41e-06">
+<sequence>AATGCAAATAGTTATCAATAA</sequence>
+<mem:qvalue>0.00168</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P17_NC_000913.2" name="P17_NC_000913.2">
+<matched-element start="621434" stop="621454" score="13.5789" pvalue="1.05e-05">
+<sequence>ATTAATTATCGTTATCGATCT</sequence>
+<mem:qvalue>0.00291</mem:qvalue>
+</matched-element>
+<matched-element start="621428" stop="621448" score="10.8816" pvalue="6.37e-05">
+<sequence>AATGAAATTAATTATCGTTAT</sequence>
+<mem:qvalue>0.00974</mem:qvalue>
+</matched-element>
+<matched-element start="621446" stop="621426" score="10.2895" pvalue="9.05e-05">
+<sequence>AACGATAATTAATTTCATTAT</sequence>
+<mem:qvalue>0.0132</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P18_NC_000913.2" name="P18_NC_000913.2">
+<matched-element start="621434" stop="621454" score="13.5789" pvalue="1.05e-05">
+<sequence>ATTAATTATCGTTATCGATCT</sequence>
+<mem:qvalue>0.00291</mem:qvalue>
+</matched-element>
+<matched-element start="621428" stop="621448" score="10.8816" pvalue="6.37e-05">
+<sequence>AATGAAATTAATTATCGTTAT</sequence>
+<mem:qvalue>0.00974</mem:qvalue>
+</matched-element>
+<matched-element start="621446" stop="621426" score="10.2895" pvalue="9.05e-05">
+<sequence>AACGATAATTAATTTCATTAT</sequence>
+<mem:qvalue>0.0132</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P19_NC_000913.2" name="P19_NC_000913.2">
+<matched-element start="623942" stop="623962" score="14.9211" pvalue="3.67e-06">
+<sequence>ATCAATAATGCTTCTCATTTT</sequence>
+<mem:qvalue>0.00153</mem:qvalue>
+</matched-element>
+<matched-element start="623948" stop="623968" score="11.7763" pvalue="3.64e-05">
+<sequence>AATGCTTCTCATTTTCATTGT</sequence>
+<mem:qvalue>0.00631</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P20_NC_000913.2" name="P20_NC_000913.2">
+<matched-element start="623942" stop="623962" score="14.9211" pvalue="3.67e-06">
+<sequence>ATCAATAATGCTTCTCATTTT</sequence>
+<mem:qvalue>0.00153</mem:qvalue>
+</matched-element>
+<matched-element start="623948" stop="623968" score="11.7763" pvalue="3.64e-05">
+<sequence>AATGCTTCTCATTTTCATTGT</sequence>
+<mem:qvalue>0.00631</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P21_NC_000913.2" name="P21_NC_000913.2">
+<matched-element start="624081" stop="624061" score="17.1974" pvalue="4.72e-07">
+<sequence>TTTAATAATGATTATCATTTA</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="624063" stop="624083" score="11.6447" pvalue="3.96e-05">
+<sequence>AATGATAATCATTATTAAAGC</sequence>
+<mem:qvalue>0.00661</mem:qvalue>
+</matched-element>
+<matched-element start="624075" stop="624095" score="10.7632" pvalue="6.84e-05">
+<sequence>TATTAAAGCCTTTATCATTTT</sequence>
+<mem:qvalue>0.0102</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P22_NC_000913.2" name="P22_NC_000913.2">
+<matched-element start="624081" stop="624061" score="17.1974" pvalue="4.72e-07">
+<sequence>TTTAATAATGATTATCATTTA</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="624063" stop="624083" score="11.6447" pvalue="3.96e-05">
+<sequence>AATGATAATCATTATTAAAGC</sequence>
+<mem:qvalue>0.00661</mem:qvalue>
+</matched-element>
+<matched-element start="624075" stop="624095" score="10.7632" pvalue="6.84e-05">
+<sequence>TATTAAAGCCTTTATCATTTT</sequence>
+<mem:qvalue>0.0102</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P23_NC_000913.2" name="P23_NC_000913.2">
+<matched-element start="674987" stop="675007" score="12.6316" pvalue="2.06e-05">
+<sequence>CCTGATAATCTTTCTCAACGC</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P24_NC_000913.2" name="P24_NC_000913.2">
+<matched-element start="674987" stop="675007" score="12.6316" pvalue="2.06e-05">
+<sequence>CCTGATAATCTTTCTCAACGC</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P25_NC_000913.2" name="P25_NC_000913.2">
+<matched-element start="701056" stop="701076" score="12.0395" pvalue="3.07e-05">
+<sequence>TTAACGTACCGTTCTCATCCA</sequence>
+<mem:qvalue>0.00565</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P26_NC_000913.2" name="P26_NC_000913.2">
+<matched-element start="745824" stop="745804" score="17.2895" pvalue="4.31e-07">
+<sequence>CATGATGCTTATTCTCATCCA</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P27_NC_000913.2" name="P27_NC_000913.2">
+<matched-element start="756261" stop="756241" score="12.6053" pvalue="2.09e-05">
+<sequence>CATCTTCGCCTTTCTCATTCA</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P28_NC_000913.2" name="P28_NC_000913.2">
+<matched-element start="786844" stop="786864" score="20.0132" pvalue="2e-08">
+<sequence>AATGATAATAATTCTCATTAT</sequence>
+<mem:qvalue>9.45e-05</mem:qvalue>
+</matched-element>
+<matched-element start="786862" stop="786842" score="18.6842" pvalue="9.84e-08">
+<sequence>AATGAGAATTATTATCATTAA</sequence>
+<mem:qvalue>0.000375</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P29_NC_000913.2" name="P29_NC_000913.2">
+<matched-element start="840868" stop="840888" score="13.8684" pvalue="8.42e-06">
+<sequence>TTTGATAAGCATTATCACTTG</sequence>
+<mem:qvalue>0.00244</mem:qvalue>
+</matched-element>
+<matched-element start="840874" stop="840854" score="12.2368" pvalue="2.69e-05">
+<sequence>TATCAAAATTATTATCACTTT</sequence>
+<mem:qvalue>0.00517</mem:qvalue>
+</matched-element>
+<matched-element start="840886" stop="840866" score="12.1316" pvalue="2.88e-05">
+<sequence>AGTGATAATGCTTATCAAAAT</sequence>
+<mem:qvalue>0.0055</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P30_NC_000913.2" name="P30_NC_000913.2">
+<matched-element start="857005" stop="857025" score="12.2763" pvalue="2.62e-05">
+<sequence>ACTTCCATTAATTCTCAAACA</sequence>
+<mem:qvalue>0.00508</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P31_NC_000913.2" name="P31_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P32_NC_000913.2" name="P32_NC_000913.2">
+<matched-element start="942147" stop="942127" score="12.6579" pvalue="2.02e-05">
+<sequence>CCTGCGAATAAATCTCAATTT</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P33_NC_000913.2" name="P33_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P34_NC_000913.2" name="P34_NC_000913.2">
+<matched-element start="1080522" stop="1080502" score="13.8816" pvalue="8.34e-06">
+<sequence>AGTGATAGCGATTATCATTAC</sequence>
+<mem:qvalue>0.00244</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P35_NC_000913.2" name="P35_NC_000913.2">
+<matched-element start="1088819" stop="1088839" score="12.5132" pvalue="2.23e-05">
+<sequence>GTTGATAACCGTTCTCGCGCA</sequence>
+<mem:qvalue>0.00444</mem:qvalue>
+</matched-element>
+<matched-element start="1088837" stop="1088817" score="10.1579" pvalue="9.76e-05">
+<sequence>CGCGAGAACGGTTATCAACCG</sequence>
+<mem:qvalue>0.014</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P36_NC_000913.2" name="P36_NC_000913.2">
+<matched-element start="1088819" stop="1088839" score="12.5132" pvalue="2.23e-05">
+<sequence>GTTGATAACCGTTCTCGCGCA</sequence>
+<mem:qvalue>0.00444</mem:qvalue>
+</matched-element>
+<matched-element start="1088837" stop="1088817" score="10.1579" pvalue="9.76e-05">
+<sequence>CGCGAGAACGGTTATCAACCG</sequence>
+<mem:qvalue>0.014</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P37_NC_000913.2" name="P37_NC_000913.2">
+<matched-element start="1160889" stop="1160869" score="14" pvalue="7.62e-06">
+<sequence>AATGCGTATATTTCTCATTTG</sequence>
+<mem:qvalue>0.00232</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P39_NC_000913.2" name="P39_NC_000913.2">
+<matched-element start="1216808" stop="1216828" score="17.5526" pvalue="3.3e-07">
+<sequence>CACAATCATCATTCTCAAACA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P40_NC_000913.2" name="P40_NC_000913.2">
+<matched-element start="1222372" stop="1222352" score="18.3026" pvalue="1.5e-07">
+<sequence>ATTTAAGATTATTCTCATTCA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P41_NC_000913.2" name="P41_NC_000913.2">
+<matched-element start="1244154" stop="1244174" score="12.6579" pvalue="2.02e-05">
+<sequence>GGTGGGAGCTATTCTCGTTCT</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P42_NC_000913.2" name="P42_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P43_NC_000913.2" name="P43_NC_000913.2">
+<matched-element start="1333481" stop="1333501" score="13.4868" pvalue="1.12e-05">
+<sequence>AATTATCATCATTCTTATTAC</sequence>
+<mem:qvalue>0.00305</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P44_NC_000913.2" name="P44_NC_000913.2">
+<matched-element start="1343140" stop="1343160" score="16.1316" pvalue="1.29e-06">
+<sequence>CCAGTTCATCATTCTCAATCA</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P45_NC_000913.2" name="P45_NC_000913.2">
+<matched-element start="1440072" stop="1440092" score="11.8421" pvalue="3.49e-05">
+<sequence>GATCGCGTTCGTTCTCATACA</sequence>
+<mem:qvalue>0.00614</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P46_NC_000913.2" name="P46_NC_000913.2">
+<matched-element start="1458549" stop="1458529" score="13.6842" pvalue="9.67e-06">
+<sequence>CGCAGGCATCGTTCTCATACA</sequence>
+<mem:qvalue>0.00276</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P47_NC_000913.2" name="P47_NC_000913.2">
+<matched-element start="1521231" stop="1521251" score="17.8026" pvalue="2.56e-07">
+<sequence>AATGATTACCATTCCCATTTA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+<matched-element start="1521225" stop="1521245" score="11.8816" pvalue="3.4e-05">
+<sequence>GAAAATAATGATTACCATTCC</sequence>
+<mem:qvalue>0.00603</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P48_NC_000913.2" name="P48_NC_000913.2">
+<matched-element start="1551924" stop="1551904" score="11.1184" pvalue="5.51e-05">
+<sequence>GTGGCGAATAAATCTCATTTG</sequence>
+<mem:qvalue>0.0087</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P49_NC_000913.2" name="P49_NC_000913.2">
+<matched-element start="1577367" stop="1577347" score="16.9474" pvalue="6.03e-07">
+<sequence>AATGATAACCATTCCCATTAC</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="1577349" stop="1577369" score="14" pvalue="7.62e-06">
+<sequence>AATGGGAATGGTTATCATTAG</sequence>
+<mem:qvalue>0.00232</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P50_NC_000913.2" name="P50_NC_000913.2">
+<matched-element start="1577367" stop="1577347" score="16.9474" pvalue="6.03e-07">
+<sequence>AATGATAACCATTCCCATTAC</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="1577349" stop="1577369" score="14" pvalue="7.62e-06">
+<sequence>AATGGGAATGGTTATCATTAG</sequence>
+<mem:qvalue>0.00232</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P51_NC_000913.2" name="P51_NC_000913.2">
+<matched-element start="1655496" stop="1655516" score="16.9868" pvalue="5.8e-07">
+<sequence>AGTAGAGATGATTCTCAATCA</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P52_NC_000913.2" name="P52_NC_000913.2">
+<matched-element start="1672504" stop="1672524" score="13.5658" pvalue="1.06e-05">
+<sequence>ATTGACAGTGTTTCTCATTAT</sequence>
+<mem:qvalue>0.00291</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P53_NC_000913.2" name="P53_NC_000913.2">
+<matched-element start="1709604" stop="1709584" score="13.2895" pvalue="1.29e-05">
+<sequence>GATGAGGATTGTTCTCACGCA</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P54_NC_000913.2" name="P54_NC_000913.2">
+<matched-element start="1709604" stop="1709584" score="13.2895" pvalue="1.29e-05">
+<sequence>GATGAGGATTGTTCTCACGCA</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P55_NC_000913.2" name="P55_NC_000913.2">
+<matched-element start="1762472" stop="1762452" score="17.3421" pvalue="4.09e-07">
+<sequence>ACTGATAATCATTATCACTAA</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P56_NC_000913.2" name="P56_NC_000913.2">
+<matched-element start="1787611" stop="1787591" score="14.6316" pvalue="4.65e-06">
+<sequence>AATGATTCTTATTATCAATAT</sequence>
+<mem:qvalue>0.00174</mem:qvalue>
+</matched-element>
+<matched-element start="1787617" stop="1787597" score="11.6053" pvalue="4.06e-05">
+<sequence>TATAACAATGATTCTTATTAT</sequence>
+<mem:qvalue>0.00668</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P57_NC_000913.2" name="P57_NC_000913.2">
+<matched-element start="1790032" stop="1790012" score="16" pvalue="1.46e-06">
+<sequence>TTGGAGAATCTTTATCATTCT</sequence>
+<mem:qvalue>0.00068</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P58_NC_000913.2" name="P58_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P59_NC_000913.2" name="P59_NC_000913.2">
+<matched-element start="1897554" stop="1897574" score="12.6711" pvalue="2e-05">
+<sequence>GCTGATAAAAGATCTCAATCA</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P60_NC_000913.2" name="P60_NC_000913.2">
+<matched-element start="1902980" stop="1903000" score="13.9211" pvalue="8.09e-06">
+<sequence>ATTGATTGTCATTCTTATCTA</sequence>
+<mem:qvalue>0.0024</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P61_NC_000913.2" name="P61_NC_000913.2">
+<matched-element start="1902980" stop="1903000" score="13.9211" pvalue="8.09e-06">
+<sequence>ATTGATTGTCATTCTTATCTA</sequence>
+<mem:qvalue>0.0024</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P62_NC_000913.2" name="P62_NC_000913.2">
+<matched-element start="1903403" stop="1903423" score="17.8553" pvalue="2.42e-07">
+<sequence>AATGAAAATCGTTATCAATAA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+<matched-element start="1903421" stop="1903401" score="14.2105" pvalue="6.48e-06">
+<sequence>ATTGATAACGATTTTCATTTG</sequence>
+<mem:qvalue>0.00209</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P63_NC_000913.2" name="P63_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P64_NC_000913.2" name="P64_NC_000913.2">
+<matched-element start="1939345" stop="1939325" score="17.5263" pvalue="3.4e-07">
+<sequence>GCTAAGCAGCATTCTCAATCA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P65_NC_000913.2" name="P65_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P66_NC_000913.2" name="P66_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P67_NC_000913.2" name="P67_NC_000913.2">
+<matched-element start="1986617" stop="1986637" score="12.3289" pvalue="2.53e-05">
+<sequence>AATGCGTTTTATTCCCATTCG</sequence>
+<mem:qvalue>0.00494</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P68_NC_000913.2" name="P68_NC_000913.2">
+<matched-element start="1994873" stop="1994893" score="10.1316" pvalue="9.91e-05">
+<sequence>CCTGAGAGTGAGTATCATTTA</sequence>
+<mem:qvalue>0.0142</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P69_NC_000913.2" name="P69_NC_000913.2">
+<matched-element start="2000931" stop="2000951" score="12.7237" pvalue="1.93e-05">
+<sequence>CATAGTAATCATTACCATTAT</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P70_NC_000913.2" name="P70_NC_000913.2">
+<matched-element start="2066620" stop="2066600" score="17.6316" pvalue="3.05e-07">
+<sequence>AATGATAATTATTTTCATTTA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+<matched-element start="2066602" stop="2066622" score="16.5132" pvalue="9.11e-07">
+<sequence>AATGAAAATAATTATCATTAC</sequence>
+<mem:qvalue>0.000527</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P71_NC_000913.2" name="P71_NC_000913.2">
+<matched-element start="2066620" stop="2066600" score="17.6316" pvalue="3.05e-07">
+<sequence>AATGATAATTATTTTCATTTA</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+<matched-element start="2066602" stop="2066622" score="16.5132" pvalue="9.11e-07">
+<sequence>AATGAAAATAATTATCATTAC</sequence>
+<mem:qvalue>0.000527</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P72_NC_000913.2" name="P72_NC_000913.2">
+<matched-element start="2244971" stop="2244991" score="17" pvalue="5.73e-07">
+<sequence>AACGATAACAATTATCAATCC</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="2244989" stop="2244969" score="12.6316" pvalue="2.06e-05">
+<sequence>ATTGATAATTGTTATCGTTTG</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P73_NC_000913.2" name="P73_NC_000913.2">
+<matched-element start="2244971" stop="2244991" score="17" pvalue="5.73e-07">
+<sequence>AACGATAACAATTATCAATCC</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="2244989" stop="2244969" score="12.6316" pvalue="2.06e-05">
+<sequence>ATTGATAATTGTTATCGTTTG</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P74_NC_000913.2" name="P74_NC_000913.2">
+<matched-element start="2306693" stop="2306713" score="12.5921" pvalue="2.11e-05">
+<sequence>AGCAATAATAATTCTTATTTT</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P75_NC_000913.2" name="P75_NC_000913.2">
+<matched-element start="2306693" stop="2306713" score="12.5921" pvalue="2.11e-05">
+<sequence>AGCAATAATAATTCTTATTTT</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P76_NC_000913.2" name="P76_NC_000913.2">
+<matched-element start="2367596" stop="2367616" score="17.5658" pvalue="3.26e-07">
+<sequence>TACGCAACTCATTCTCAATCT</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P77_NC_000913.2" name="P77_NC_000913.2">
+<matched-element start="2436379" stop="2436399" score="15.7368" pvalue="1.84e-06">
+<sequence>ATTAAAAACCATTCTCACCCT</sequence>
+<mem:qvalue>0.000825</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P78_NC_000913.2" name="P78_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P79_NC_000913.2" name="P79_NC_000913.2">
+<matched-element start="2447558" stop="2447578" score="13.3684" pvalue="1.22e-05">
+<sequence>TACTGACATAATTCTCATTCC</sequence>
+<mem:qvalue>0.00325</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P80_NC_000913.2" name="P80_NC_000913.2">
+<matched-element start="2454151" stop="2454131" score="17.0132" pvalue="5.66e-07">
+<sequence>TTTGACACTCATTATCATTTA</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P81_NC_000913.2" name="P81_NC_000913.2">
+<matched-element start="2510793" stop="2510773" score="16.9474" pvalue="6.03e-07">
+<sequence>TTTGATAATCATTCTCGTTTG</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="2510775" stop="2510795" score="14.7105" pvalue="4.36e-06">
+<sequence>AACGAGAATGATTATCAAATT</sequence>
+<mem:qvalue>0.00168</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P82_NC_000913.2" name="P82_NC_000913.2">
+<matched-element start="2510793" stop="2510773" score="16.9474" pvalue="6.03e-07">
+<sequence>TTTGATAATCATTCTCGTTTG</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+<matched-element start="2510775" stop="2510795" score="14.7105" pvalue="4.36e-06">
+<sequence>AACGAGAATGATTATCAAATT</sequence>
+<mem:qvalue>0.00168</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P83_NC_000913.2" name="P83_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P84_NC_000913.2" name="P84_NC_000913.2">
+<matched-element start="2626688" stop="2626668" score="17.1447" pvalue="4.97e-07">
+<sequence>TTTTATTATCATTATCATTCT</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P85_NC_000913.2" name="P85_NC_000913.2">
+<matched-element start="2749880" stop="2749860" score="15.1711" pvalue="2.99e-06">
+<sequence>TATGAAAATCAATCTCAAGCT</sequence>
+<mem:qvalue>0.00129</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P86_NC_000913.2" name="P86_NC_000913.2">
+<matched-element start="2749880" stop="2749860" score="15.1711" pvalue="2.99e-06">
+<sequence>TATGAAAATCAATCTCAAGCT</sequence>
+<mem:qvalue>0.00129</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P87_NC_000913.2" name="P87_NC_000913.2">
+<matched-element start="2758002" stop="2757982" score="17.5921" pvalue="3.17e-07">
+<sequence>AAGGCCAATCATTCTCATTTC</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P88_NC_000913.2" name="P88_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P89_NC_000913.2" name="P89_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P90_NC_000913.2" name="P90_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P91_NC_000913.2" name="P91_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P92_NC_000913.2" name="P92_NC_000913.2">
+<matched-element start="2831984" stop="2832004" score="11.2105" pvalue="5.21e-05">
+<sequence>GGTGAAAAATATTCGCAAACA</sequence>
+<mem:qvalue>0.00827</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P93_NC_000913.2" name="P93_NC_000913.2">
+<matched-element start="2922384" stop="2922404" score="11.2895" pvalue="4.96e-05">
+<sequence>ATCCTGACCGGTTCTCATTCT</sequence>
+<mem:qvalue>0.00804</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P94_NC_000913.2" name="P94_NC_000913.2">
+<matched-element start="2956088" stop="2956068" score="11.1053" pvalue="5.56e-05">
+<sequence>GCAAAAGGGCATTATCATTCA</sequence>
+<mem:qvalue>0.00871</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P95_NC_000913.2" name="P95_NC_000913.2">
+<matched-element start="3013889" stop="3013909" score="16.75" pvalue="7.29e-07">
+<sequence>AGTGATTTTAATTCTCATTTA</sequence>
+<mem:qvalue>0.00049</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P96_NC_000913.2" name="P96_NC_000913.2">
+<matched-element start="3144516" stop="3144536" score="11.0132" pvalue="5.88e-05">
+<sequence>AACAGGAATTATTCTCACGAA</sequence>
+<mem:qvalue>0.00915</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P97_NC_000913.2" name="P97_NC_000913.2">
+<matched-element start="3150067" stop="3150087" score="17.7237" pvalue="2.77e-07">
+<sequence>ATTGATAGTCGTTCTCATTAC</sequence>
+<mem:qvalue>0.000409</mem:qvalue>
+</matched-element>
+<matched-element start="3150085" stop="3150065" score="12.0658" pvalue="3.01e-05">
+<sequence>AATGAGAACGACTATCAATTC</sequence>
+<mem:qvalue>0.0056</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P98_NC_000913.2" name="P98_NC_000913.2">
+<matched-element start="3214581" stop="3214561" score="16.1316" pvalue="1.29e-06">
+<sequence>ATTAACAATCATTATCATTTG</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+<matched-element start="3214563" stop="3214583" score="12.6579" pvalue="2.02e-05">
+<sequence>AATGATAATGATTGTTAATCA</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P99_NC_000913.2" name="P99_NC_000913.2">
+<matched-element start="3214581" stop="3214561" score="16.1316" pvalue="1.29e-06">
+<sequence>ATTAACAATCATTATCATTTG</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+<matched-element start="3214563" stop="3214583" score="12.6579" pvalue="2.02e-05">
+<sequence>AATGATAATGATTGTTAATCA</sequence>
+<mem:qvalue>0.00428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P100_NC_000913.2" name="P100_NC_000913.2">
+<matched-element start="3252230" stop="3252250" score="11.6053" pvalue="4.06e-05">
+<sequence>TGGCCATTTCGTTCTCATTCA</sequence>
+<mem:qvalue>0.00668</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P101_NC_000913.2" name="P101_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P102_NC_000913.2" name="P102_NC_000913.2">
+<matched-element start="3346320" stop="3346340" score="16.2895" pvalue="1.12e-06">
+<sequence>TACTGAAATCGTTCTCAATCA</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P103_NC_000913.2" name="P103_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P104_NC_000913.2" name="P104_NC_000913.2">
+<matched-element start="3372178" stop="3372158" score="11.6842" pvalue="3.86e-05">
+<sequence>AAAGATTTCCTTTCTCATCCC</sequence>
+<mem:qvalue>0.00659</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P105_NC_000913.2" name="P105_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P106_NC_000913.2" name="P106_NC_000913.2">
+<matched-element start="3538050" stop="3538070" score="16.1974" pvalue="1.22e-06">
+<sequence>GATAGAAACCATTCTCATTAT</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+<matched-element start="3538056" stop="3538076" score="11.9211" pvalue="3.31e-05">
+<sequence>AACCATTCTCATTATCATTGT</sequence>
+<mem:qvalue>0.00592</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P107_NC_000913.2" name="P107_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P108_NC_000913.2" name="P108_NC_000913.2">
+<matched-element start="3579045" stop="3579065" score="22.0789" pvalue="1.04e-09">
+<sequence>AATAATAATCATTCTCATTCG</sequence>
+<mem:qvalue>1.19e-05</mem:qvalue>
+</matched-element>
+<matched-element start="3579063" stop="3579043" score="12.0789" pvalue="2.99e-05">
+<sequence>AATGAGAATGATTATTATTGT</sequence>
+<mem:qvalue>0.0056</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P109_NC_000913.2" name="P109_NC_000913.2">
+<matched-element start="3579045" stop="3579065" score="22.0789" pvalue="1.04e-09">
+<sequence>AATAATAATCATTCTCATTCG</sequence>
+<mem:qvalue>1.19e-05</mem:qvalue>
+</matched-element>
+<matched-element start="3579063" stop="3579043" score="12.0789" pvalue="2.99e-05">
+<sequence>AATGAGAATGATTATTATTGT</sequence>
+<mem:qvalue>0.0056</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P110_NC_000913.2" name="P110_NC_000913.2">
+<matched-element start="3580836" stop="3580816" score="11.6711" pvalue="3.9e-05">
+<sequence>AACATTGCCCTTTCTCATTCT</sequence>
+<mem:qvalue>0.0066</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P111_NC_000913.2" name="P111_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P112_NC_000913.2" name="P112_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P113_NC_000913.2" name="P113_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P114_NC_000913.2" name="P114_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P115_NC_000913.2" name="P115_NC_000913.2">
+<matched-element start="3731489" stop="3731509" score="10.8684" pvalue="6.42e-05">
+<sequence>TAACCCGCGCATTCTCATTCT</sequence>
+<mem:qvalue>0.00974</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P116_NC_000913.2" name="P116_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P117_NC_000913.2" name="P117_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P118_NC_000913.2" name="P118_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P119_NC_000913.2" name="P119_NC_000913.2">
+<matched-element start="4060490" stop="4060510" score="11.9474" pvalue="3.26e-05">
+<sequence>ACACCATGTCATTCTCACTCA</sequence>
+<mem:qvalue>0.00586</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P120_NC_000913.2" name="P120_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P121_NC_000913.2" name="P121_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P122_NC_000913.2" name="P122_NC_000913.2">
+<matched-element start="4078858" stop="4078878" score="11.6842" pvalue="3.86e-05">
+<sequence>CCTTCTCCAGATTCTCAATCA</sequence>
+<mem:qvalue>0.00659</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P123_NC_000913.2" name="P123_NC_000913.2">
+<matched-element start="4098737" stop="4098757" score="16.6053" pvalue="8.36e-07">
+<sequence>ATTGATAATCATTTTCAATAT</sequence>
+<mem:qvalue>0.000527</mem:qvalue>
+</matched-element>
+<matched-element start="4098755" stop="4098735" score="14.4474" pvalue="5.38e-06">
+<sequence>ATTGAAAATGATTATCAATGC</sequence>
+<mem:qvalue>0.00186</mem:qvalue>
+</matched-element>
+<matched-element start="4098743" stop="4098763" score="12.0132" pvalue="3.12e-05">
+<sequence>AATCATTTTCAATATCATTTA</sequence>
+<mem:qvalue>0.00566</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P124_NC_000913.2" name="P124_NC_000913.2">
+<matched-element start="4098737" stop="4098757" score="16.6053" pvalue="8.36e-07">
+<sequence>ATTGATAATCATTTTCAATAT</sequence>
+<mem:qvalue>0.000527</mem:qvalue>
+</matched-element>
+<matched-element start="4098755" stop="4098735" score="14.4474" pvalue="5.38e-06">
+<sequence>ATTGAAAATGATTATCAATGC</sequence>
+<mem:qvalue>0.00186</mem:qvalue>
+</matched-element>
+<matched-element start="4098743" stop="4098763" score="12.0132" pvalue="3.12e-05">
+<sequence>AATCATTTTCAATATCATTTA</sequence>
+<mem:qvalue>0.00566</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P125_NC_000913.2" name="P125_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P126_NC_000913.2" name="P126_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P127_NC_000913.2" name="P127_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P128_NC_000913.2" name="P128_NC_000913.2">
+<matched-element start="4261511" stop="4261491" score="13.2237" pvalue="1.36e-05">
+<sequence>GAACTTAGGCATTCTCAATCA</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P129_NC_000913.2" name="P129_NC_000913.2">
+<matched-element start="4281641" stop="4281661" score="10.5395" pvalue="7.82e-05">
+<sequence>CGATGTTCTGATTCTCAAACA</sequence>
+<mem:qvalue>0.0115</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P130_NC_000913.2" name="P130_NC_000913.2">
+<matched-element start="4360264" stop="4360284" score="14.0658" pvalue="7.24e-06">
+<sequence>ATTTCTCTTTGTTCTCATTCA</sequence>
+<mem:qvalue>0.0023</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P131_NC_000913.2" name="P131_NC_000913.2">
+<matched-element start="4463139" stop="4463119" score="14.5789" pvalue="4.85e-06">
+<sequence>CGTGATAGGCATTATCATTTC</sequence>
+<mem:qvalue>0.00179</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P132_NC_000913.2" name="P132_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P133_NC_000913.2" name="P133_NC_000913.2">
+<matched-element start="4514788" stop="4514768" score="13.4474" pvalue="1.15e-05">
+<sequence>AAGGAAAATAATTCTTATTTC</sequence>
+<mem:qvalue>0.0031</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P134_NC_000913.2" name="P134_NC_000913.2">
+<matched-element start="4516318" stop="4516298" score="19.9868" pvalue="2.07e-08">
+<sequence>AATGATAACCATTCTCATATT</sequence>
+<mem:qvalue>9.45e-05</mem:qvalue>
+</matched-element>
+<matched-element start="4516300" stop="4516320" score="14.4868" pvalue="5.22e-06">
+<sequence>TATGAGAATGGTTATCATTAC</sequence>
+<mem:qvalue>0.00186</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P135_NC_000913.2" name="P135_NC_000913.2">
+<matched-element start="4516318" stop="4516298" score="19.9868" pvalue="2.07e-08">
+<sequence>AATGATAACCATTCTCATATT</sequence>
+<mem:qvalue>9.45e-05</mem:qvalue>
+</matched-element>
+<matched-element start="4516300" stop="4516320" score="14.4868" pvalue="5.22e-06">
+<sequence>TATGAGAATGGTTATCATTAC</sequence>
+<mem:qvalue>0.00186</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P136_NC_000913.2" name="P136_NC_000913.2">
+<matched-element start="4517978" stop="4517998" score="15.9737" pvalue="1.49e-06">
+<sequence>GCACATCACCATTCTCAATCA</sequence>
+<mem:qvalue>0.000682</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P137_NC_000913.2" name="P137_NC_000913.2">
+<matched-element start="4523993" stop="4523973" score="14.7763" pvalue="4.13e-06">
+<sequence>TCTACTTTTTATTCTCATTCA</sequence>
+<mem:qvalue>0.00168</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P138_NC_000913.2" name="P138_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P139_NC_000913.2" name="P139_NC_000913.2">
+<matched-element start="4570234" stop="4570214" score="16.5" pvalue="9.22e-07">
+<sequence>AATGAAAATAAATCTCAAACA</sequence>
+<mem:qvalue>0.000527</mem:qvalue>
+</matched-element>
+<matched-element start="4570216" stop="4570236" score="10.8553" pvalue="6.47e-05">
+<sequence>TTTGAGATTTATTTTCATTTG</sequence>
+<mem:qvalue>0.00974</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P140_NC_000913.2" name="P140_NC_000913.2">
+<matched-element start="4570234" stop="4570214" score="16.5" pvalue="9.22e-07">
+<sequence>AATGAAAATAAATCTCAAACA</sequence>
+<mem:qvalue>0.000527</mem:qvalue>
+</matched-element>
+<matched-element start="4570216" stop="4570236" score="10.8553" pvalue="6.47e-05">
+<sequence>TTTGAGATTTATTTTCATTTG</sequence>
+<mem:qvalue>0.00974</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P141_NC_000913.2" name="P141_NC_000913.2">
+<matched-element start="4603723" stop="4603703" score="17.1053" pvalue="5.17e-07">
+<sequence>ATTAGCAATCATTATCATTTA</sequence>
+<mem:qvalue>0.000418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P142_NC_000913.2" name="P142_NC_000913.2">
+<matched-element start="4603793" stop="4603813" score="16.1184" pvalue="1.31e-06">
+<sequence>ATTGGTTATCATTATCAATGA</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+<matched-element start="4603788" stop="4603768" score="14.2895" pvalue="6.09e-06">
+<sequence>TATGATAATTTTTATCATTTG</sequence>
+<mem:qvalue>0.00199</mem:qvalue>
+</matched-element>
+<matched-element start="4603805" stop="4603785" score="13.1974" pvalue="1.38e-05">
+<sequence>AATGATAACCAATATCATATG</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+<matched-element start="4603770" stop="4603790" score="13.1842" pvalue="1.39e-05">
+<sequence>AATGATAAAAATTATCATATG</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+<matched-element start="4603787" stop="4603807" score="12.8421" pvalue="1.78e-05">
+<sequence>TATGATATTGGTTATCATTAT</sequence>
+<mem:qvalue>0.00411</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P143_NC_000913.2" name="P143_NC_000913.2">
+<matched-element start="4603793" stop="4603813" score="16.1184" pvalue="1.31e-06">
+<sequence>ATTGGTTATCATTATCAATGA</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+<matched-element start="4603788" stop="4603768" score="14.2895" pvalue="6.09e-06">
+<sequence>TATGATAATTTTTATCATTTG</sequence>
+<mem:qvalue>0.00199</mem:qvalue>
+</matched-element>
+<matched-element start="4603805" stop="4603785" score="13.1974" pvalue="1.38e-05">
+<sequence>AATGATAACCAATATCATATG</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+<matched-element start="4603770" stop="4603790" score="13.1842" pvalue="1.39e-05">
+<sequence>AATGATAAAAATTATCATATG</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+<matched-element start="4603787" stop="4603807" score="12.8421" pvalue="1.78e-05">
+<sequence>TATGATATTGGTTATCATTAT</sequence>
+<mem:qvalue>0.00411</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P144_NC_000913.2" name="P144_NC_000913.2">
+<matched-element start="4603793" stop="4603813" score="16.1184" pvalue="1.31e-06">
+<sequence>ATTGGTTATCATTATCAATGA</sequence>
+<mem:qvalue>0.000624</mem:qvalue>
+</matched-element>
+<matched-element start="4603788" stop="4603768" score="14.2895" pvalue="6.09e-06">
+<sequence>TATGATAATTTTTATCATTTG</sequence>
+<mem:qvalue>0.00199</mem:qvalue>
+</matched-element>
+<matched-element start="4603805" stop="4603785" score="13.1974" pvalue="1.38e-05">
+<sequence>AATGATAACCAATATCATATG</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+<matched-element start="4603770" stop="4603790" score="13.1842" pvalue="1.39e-05">
+<sequence>AATGATAAAAATTATCATATG</sequence>
+<mem:qvalue>0.00336</mem:qvalue>
+</matched-element>
+<matched-element start="4603787" stop="4603807" score="12.8421" pvalue="1.78e-05">
+<sequence>TATGATATTGGTTATCATTAT</sequence>
+<mem:qvalue>0.00411</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="HCARAYADADMCYTTGCTATC" name="MEME-2">
+<scanned-sequence accession="P1_NC_000913.2" name="P1_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P2_NC_000913.2" name="P2_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P3_NC_000913.2" name="P3_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P4_NC_000913.2" name="P4_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P5_NC_000913.2" name="P5_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P6_NC_000913.2" name="P6_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P7_NC_000913.2" name="P7_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P8_NC_000913.2" name="P8_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P9_NC_000913.2" name="P9_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P10_NC_000913.2" name="P10_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P11_NC_000913.2" name="P11_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P12_NC_000913.2" name="P12_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P13_NC_000913.2" name="P13_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P14_NC_000913.2" name="P14_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P15_NC_000913.2" name="P15_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P16_NC_000913.2" name="P16_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P17_NC_000913.2" name="P17_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P18_NC_000913.2" name="P18_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P19_NC_000913.2" name="P19_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P20_NC_000913.2" name="P20_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P21_NC_000913.2" name="P21_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P22_NC_000913.2" name="P22_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P23_NC_000913.2" name="P23_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P24_NC_000913.2" name="P24_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P25_NC_000913.2" name="P25_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P26_NC_000913.2" name="P26_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P27_NC_000913.2" name="P27_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P28_NC_000913.2" name="P28_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P29_NC_000913.2" name="P29_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P30_NC_000913.2" name="P30_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P31_NC_000913.2" name="P31_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P32_NC_000913.2" name="P32_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P33_NC_000913.2" name="P33_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P34_NC_000913.2" name="P34_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P35_NC_000913.2" name="P35_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P36_NC_000913.2" name="P36_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P37_NC_000913.2" name="P37_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P39_NC_000913.2" name="P39_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P40_NC_000913.2" name="P40_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P41_NC_000913.2" name="P41_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P42_NC_000913.2" name="P42_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P43_NC_000913.2" name="P43_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P44_NC_000913.2" name="P44_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P45_NC_000913.2" name="P45_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P46_NC_000913.2" name="P46_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P47_NC_000913.2" name="P47_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P48_NC_000913.2" name="P48_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P49_NC_000913.2" name="P49_NC_000913.2">
+<matched-element start="1577314" stop="1577334" score="24.4907" pvalue="6.69e-09">
+<sequence>AGACAGAGATACTTTGCTATC</sequence>
+<mem:qvalue>1.93e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P50_NC_000913.2" name="P50_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P51_NC_000913.2" name="P51_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P52_NC_000913.2" name="P52_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P53_NC_000913.2" name="P53_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P54_NC_000913.2" name="P54_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P55_NC_000913.2" name="P55_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P56_NC_000913.2" name="P56_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P57_NC_000913.2" name="P57_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P58_NC_000913.2" name="P58_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P59_NC_000913.2" name="P59_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P60_NC_000913.2" name="P60_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P61_NC_000913.2" name="P61_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P62_NC_000913.2" name="P62_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P63_NC_000913.2" name="P63_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P64_NC_000913.2" name="P64_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P65_NC_000913.2" name="P65_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P66_NC_000913.2" name="P66_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P67_NC_000913.2" name="P67_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P68_NC_000913.2" name="P68_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P69_NC_000913.2" name="P69_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P70_NC_000913.2" name="P70_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P71_NC_000913.2" name="P71_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P72_NC_000913.2" name="P72_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P73_NC_000913.2" name="P73_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P74_NC_000913.2" name="P74_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P75_NC_000913.2" name="P75_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P76_NC_000913.2" name="P76_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P77_NC_000913.2" name="P77_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P78_NC_000913.2" name="P78_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P79_NC_000913.2" name="P79_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P80_NC_000913.2" name="P80_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P81_NC_000913.2" name="P81_NC_000913.2">
+<matched-element start="2510739" stop="2510759" score="25.9907" pvalue="3.15e-09">
+<sequence>TAAAACATAGCCTTTGCTATG</sequence>
+<mem:qvalue>1.39e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P82_NC_000913.2" name="P82_NC_000913.2">
+<matched-element start="2510739" stop="2510759" score="25.9907" pvalue="3.15e-09">
+<sequence>TAAAACATAGCCTTTGCTATG</sequence>
+<mem:qvalue>1.39e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P83_NC_000913.2" name="P83_NC_000913.2">
+<matched-element start="2562657" stop="2562637" score="8.97222" pvalue="3.49e-06">
+<sequence>CGAGTTAACTCGTTTGCGATC</sequence>
+<mem:qvalue>0.00896</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P84_NC_000913.2" name="P84_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P85_NC_000913.2" name="P85_NC_000913.2">
+<matched-element start="2749832" stop="2749852" score="25.4907" pvalue="4.21e-09">
+<sequence>ACCATCAGCAACTTTGCTATC</sequence>
+<mem:qvalue>1.39e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P86_NC_000913.2" name="P86_NC_000913.2">
+<matched-element start="2749832" stop="2749852" score="25.4907" pvalue="4.21e-09">
+<sequence>ACCATCAGCAACTTTGCTATC</sequence>
+<mem:qvalue>1.39e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P87_NC_000913.2" name="P87_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P88_NC_000913.2" name="P88_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P89_NC_000913.2" name="P89_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P90_NC_000913.2" name="P90_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P91_NC_000913.2" name="P91_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P92_NC_000913.2" name="P92_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P93_NC_000913.2" name="P93_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P94_NC_000913.2" name="P94_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P95_NC_000913.2" name="P95_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P96_NC_000913.2" name="P96_NC_000913.2">
+<matched-element start="3144533" stop="3144553" score="3.06481" pvalue="1.74e-05">
+<sequence>CGAAAGAAATCCATTACCATC</sequence>
+<mem:qvalue>0.0402</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P97_NC_000913.2" name="P97_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P98_NC_000913.2" name="P98_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P99_NC_000913.2" name="P99_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P100_NC_000913.2" name="P100_NC_000913.2">
+<matched-element start="3252211" stop="3252231" score="-1.58333" pvalue="7.13e-05">
+<sequence>AGCGTTAATGCCCTTTCTTTG</sequence>
+<mem:qvalue>0.15</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P101_NC_000913.2" name="P101_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P102_NC_000913.2" name="P102_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P103_NC_000913.2" name="P103_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P104_NC_000913.2" name="P104_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P105_NC_000913.2" name="P105_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P106_NC_000913.2" name="P106_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P107_NC_000913.2" name="P107_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P108_NC_000913.2" name="P108_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P109_NC_000913.2" name="P109_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P110_NC_000913.2" name="P110_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P111_NC_000913.2" name="P111_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P112_NC_000913.2" name="P112_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P113_NC_000913.2" name="P113_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P114_NC_000913.2" name="P114_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P115_NC_000913.2" name="P115_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P116_NC_000913.2" name="P116_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P117_NC_000913.2" name="P117_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P118_NC_000913.2" name="P118_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P119_NC_000913.2" name="P119_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P120_NC_000913.2" name="P120_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P121_NC_000913.2" name="P121_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P122_NC_000913.2" name="P122_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P123_NC_000913.2" name="P123_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P124_NC_000913.2" name="P124_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P125_NC_000913.2" name="P125_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P126_NC_000913.2" name="P126_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P127_NC_000913.2" name="P127_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P128_NC_000913.2" name="P128_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P129_NC_000913.2" name="P129_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P130_NC_000913.2" name="P130_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P131_NC_000913.2" name="P131_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P132_NC_000913.2" name="P132_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P133_NC_000913.2" name="P133_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P134_NC_000913.2" name="P134_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P135_NC_000913.2" name="P135_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P136_NC_000913.2" name="P136_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P137_NC_000913.2" name="P137_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P138_NC_000913.2" name="P138_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P139_NC_000913.2" name="P139_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P140_NC_000913.2" name="P140_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P141_NC_000913.2" name="P141_NC_000913.2">
+<matched-element start="4603763" stop="4603743" score="30.3704" pvalue="2.23e-11">
+<sequence>CCAGATAAATCCCTTGCTATC</sequence>
+<mem:qvalue>1.71e-07</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P142_NC_000913.2" name="P142_NC_000913.2">
+<matched-element start="4603763" stop="4603743" score="30.3704" pvalue="2.23e-11">
+<sequence>CCAGATAAATCCCTTGCTATC</sequence>
+<mem:qvalue>1.71e-07</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P143_NC_000913.2" name="P143_NC_000913.2">
+<matched-element start="4603763" stop="4603743" score="30.3704" pvalue="2.23e-11">
+<sequence>CCAGATAAATCCCTTGCTATC</sequence>
+<mem:qvalue>1.71e-07</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P144_NC_000913.2" name="P144_NC_000913.2">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="KGCGTGANCGHWTTVMSHGGC" name="MEME-3">
+<scanned-sequence accession="P1_NC_000913.2" name="P1_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P2_NC_000913.2" name="P2_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P3_NC_000913.2" name="P3_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P4_NC_000913.2" name="P4_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P5_NC_000913.2" name="P5_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P6_NC_000913.2" name="P6_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P7_NC_000913.2" name="P7_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P8_NC_000913.2" name="P8_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P9_NC_000913.2" name="P9_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P10_NC_000913.2" name="P10_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P11_NC_000913.2" name="P11_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P12_NC_000913.2" name="P12_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P13_NC_000913.2" name="P13_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P14_NC_000913.2" name="P14_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P15_NC_000913.2" name="P15_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P16_NC_000913.2" name="P16_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P17_NC_000913.2" name="P17_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P18_NC_000913.2" name="P18_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P19_NC_000913.2" name="P19_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P20_NC_000913.2" name="P20_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P21_NC_000913.2" name="P21_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P22_NC_000913.2" name="P22_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P23_NC_000913.2" name="P23_NC_000913.2">
+<matched-element start="674943" stop="674963" score="22.7449" pvalue="1.62e-08">
+<sequence>GGCGTCATTGCATTCAGCGGC</sequence>
+<mem:qvalue>5.65e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P24_NC_000913.2" name="P24_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P25_NC_000913.2" name="P25_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P26_NC_000913.2" name="P26_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P27_NC_000913.2" name="P27_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P28_NC_000913.2" name="P28_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P29_NC_000913.2" name="P29_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P30_NC_000913.2" name="P30_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P31_NC_000913.2" name="P31_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P32_NC_000913.2" name="P32_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P33_NC_000913.2" name="P33_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P34_NC_000913.2" name="P34_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P35_NC_000913.2" name="P35_NC_000913.2">
+<matched-element start="1088860" stop="1088840" score="24.2755" pvalue="4.15e-09">
+<sequence>TGCGTGAACAATTTGCCTGGC</sequence>
+<mem:qvalue>2.9e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P36_NC_000913.2" name="P36_NC_000913.2">
+<matched-element start="1088860" stop="1088840" score="24.2755" pvalue="4.15e-09">
+<sequence>TGCGTGAACAATTTGCCTGGC</sequence>
+<mem:qvalue>2.9e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P37_NC_000913.2" name="P37_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P39_NC_000913.2" name="P39_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P40_NC_000913.2" name="P40_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P41_NC_000913.2" name="P41_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P42_NC_000913.2" name="P42_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P43_NC_000913.2" name="P43_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P44_NC_000913.2" name="P44_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P45_NC_000913.2" name="P45_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P46_NC_000913.2" name="P46_NC_000913.2">
+<matched-element start="1458527" stop="1458507" score="21.6939" pvalue="3.73e-08">
+<sequence>TGCATGGGCATTTTGCCAGGC</sequence>
+<mem:qvalue>0.000107</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P47_NC_000913.2" name="P47_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P48_NC_000913.2" name="P48_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P49_NC_000913.2" name="P49_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P50_NC_000913.2" name="P50_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P51_NC_000913.2" name="P51_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P52_NC_000913.2" name="P52_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P53_NC_000913.2" name="P53_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P54_NC_000913.2" name="P54_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P55_NC_000913.2" name="P55_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P56_NC_000913.2" name="P56_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P57_NC_000913.2" name="P57_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P58_NC_000913.2" name="P58_NC_000913.2">
+<matched-element start="1876469" stop="1876449" score="16.5918" pvalue="9.2e-07">
+<sequence>TGCTGGAGCGTATTAAGGCGC</sequence>
+<mem:qvalue>0.00163</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P59_NC_000913.2" name="P59_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P60_NC_000913.2" name="P60_NC_000913.2">
+<matched-element start="1902946" stop="1902966" score="18.8265" pvalue="2.6e-07">
+<sequence>GGCGTGGTCGCATCGATAGCG</sequence>
+<mem:qvalue>0.000599</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P61_NC_000913.2" name="P61_NC_000913.2">
+<matched-element start="1902946" stop="1902966" score="18.8265" pvalue="2.6e-07">
+<sequence>GGCGTGGTCGCATCGATAGCG</sequence>
+<mem:qvalue>0.000599</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P62_NC_000913.2" name="P62_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P63_NC_000913.2" name="P63_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P64_NC_000913.2" name="P64_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P65_NC_000913.2" name="P65_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P66_NC_000913.2" name="P66_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P67_NC_000913.2" name="P67_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P68_NC_000913.2" name="P68_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P69_NC_000913.2" name="P69_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P70_NC_000913.2" name="P70_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P71_NC_000913.2" name="P71_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P72_NC_000913.2" name="P72_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P73_NC_000913.2" name="P73_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P74_NC_000913.2" name="P74_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P75_NC_000913.2" name="P75_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P76_NC_000913.2" name="P76_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P77_NC_000913.2" name="P77_NC_000913.2">
+<matched-element start="2436372" stop="2436352" score="18.1531" pvalue="3.89e-07">
+<sequence>GGTGAGAGCTGATTCAGCGGC</sequence>
+<mem:qvalue>0.000804</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P78_NC_000913.2" name="P78_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P79_NC_000913.2" name="P79_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P80_NC_000913.2" name="P80_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P81_NC_000913.2" name="P81_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P82_NC_000913.2" name="P82_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P83_NC_000913.2" name="P83_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P84_NC_000913.2" name="P84_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P85_NC_000913.2" name="P85_NC_000913.2">
+<matched-element start="2749883" stop="2749903" score="23.8265" pvalue="6.3e-09">
+<sequence>GGCATGACCGTAATAACTGGC</sequence>
+<mem:qvalue>2.9e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P86_NC_000913.2" name="P86_NC_000913.2">
+<matched-element start="2749883" stop="2749903" score="23.8265" pvalue="6.3e-09">
+<sequence>GGCATGACCGTAATAACTGGC</sequence>
+<mem:qvalue>2.9e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P87_NC_000913.2" name="P87_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P88_NC_000913.2" name="P88_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P89_NC_000913.2" name="P89_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P90_NC_000913.2" name="P90_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P91_NC_000913.2" name="P91_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P92_NC_000913.2" name="P92_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P93_NC_000913.2" name="P93_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P94_NC_000913.2" name="P94_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P95_NC_000913.2" name="P95_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P96_NC_000913.2" name="P96_NC_000913.2">
+<matched-element start="3144465" stop="3144485" score="15.4184" pvalue="1.67e-06">
+<sequence>TGTTTGATCAATTTTCGAGGC</sequence>
+<mem:qvalue>0.00274</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P97_NC_000913.2" name="P97_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P98_NC_000913.2" name="P98_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P99_NC_000913.2" name="P99_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P100_NC_000913.2" name="P100_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P101_NC_000913.2" name="P101_NC_000913.2">
+<matched-element start="3328491" stop="3328511" score="22.6735" pvalue="1.72e-08">
+<sequence>GGCGTAAACGCCTTATCCGGC</sequence>
+<mem:qvalue>5.65e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P102_NC_000913.2" name="P102_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P103_NC_000913.2" name="P103_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P104_NC_000913.2" name="P104_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P105_NC_000913.2" name="P105_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P106_NC_000913.2" name="P106_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P107_NC_000913.2" name="P107_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P108_NC_000913.2" name="P108_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P109_NC_000913.2" name="P109_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P110_NC_000913.2" name="P110_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P111_NC_000913.2" name="P111_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P112_NC_000913.2" name="P112_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P113_NC_000913.2" name="P113_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P114_NC_000913.2" name="P114_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P115_NC_000913.2" name="P115_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P116_NC_000913.2" name="P116_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P117_NC_000913.2" name="P117_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P118_NC_000913.2" name="P118_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P119_NC_000913.2" name="P119_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P120_NC_000913.2" name="P120_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P121_NC_000913.2" name="P121_NC_000913.2">
+<matched-element start="4078052" stop="4078072" score="26.551" pvalue="3.55e-10">
+<sequence>GGCGTGAACGCCTTATCCGGC</sequence>
+<mem:qvalue>8.16e-06</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P122_NC_000913.2" name="P122_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P123_NC_000913.2" name="P123_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P124_NC_000913.2" name="P124_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P125_NC_000913.2" name="P125_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P126_NC_000913.2" name="P126_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P127_NC_000913.2" name="P127_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P128_NC_000913.2" name="P128_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P129_NC_000913.2" name="P129_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P130_NC_000913.2" name="P130_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P131_NC_000913.2" name="P131_NC_000913.2">
+<matched-element start="4463158" stop="4463178" score="18.0204" pvalue="4.2e-07">
+<sequence>TTCGACAGCGCAATCAGCGGC</sequence>
+<mem:qvalue>0.000804</mem:qvalue>
+</matched-element>
+<matched-element start="4463132" stop="4463112" score="8.79592" pvalue="2.77e-05">
+<sequence>GGCATTATCATTTCCAGCCGC</sequence>
+<mem:qvalue>0.0424</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="P132_NC_000913.2" name="P132_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P133_NC_000913.2" name="P133_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P134_NC_000913.2" name="P134_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P135_NC_000913.2" name="P135_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P136_NC_000913.2" name="P136_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P137_NC_000913.2" name="P137_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P138_NC_000913.2" name="P138_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P139_NC_000913.2" name="P139_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P140_NC_000913.2" name="P140_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P141_NC_000913.2" name="P141_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P142_NC_000913.2" name="P142_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P143_NC_000913.2" name="P143_NC_000913.2">
+</scanned-sequence>
+<scanned-sequence accession="P144_NC_000913.2" name="P144_NC_000913.2">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+</cis-element-search>
